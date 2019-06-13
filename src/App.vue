@@ -5,9 +5,21 @@
 </template>
 
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css"
+
 export default {
-  name: 'App'
+  name: 'App',
+  created(){
+    AOS.init()
+  }
 }
+
+// Vue.directive('test', {
+//   bind(el, binding, vnode){
+//     el.style.color = "red"
+//   }
+// })
 </script>
 
 <style>

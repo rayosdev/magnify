@@ -8,44 +8,84 @@
         
         <div class="top-pitch">
           <h1 class="top-pitch__header-text">magnify gir ditt team</h1>
-          <img class="top-pitch__arrow" src="~assets/about/home-magnify-arrow-top-section.svg" alt="">
-          <ol class="top-pitch__order-list">
-            <li class="top-pitch__list-item">
-              <h2>1. Mer Motivasjon</h2>
-            </li>
-            <li class="top-pitch__list-item">
-              <h2>2. høyere fokus</h2>
-            </li>
-            <li class="top-pitch__list-item">
-              <h2>3. Økt prodktivitet</h2>
-            </li>
-          </ol>
-          <button>SE HVORDAN</button>
+          <div class="top-pitch__arrow-and-list-container">
+            <img class="top-pitch__arrow" src="~assets/about/home-magnify-arrow-top-section.svg" alt="">
+            <ol class="top-pitch__order-list">
+              <li class="top-pitch__list-item">1. Mer Motivasjon</li>
+              <li class="top-pitch__list-item">2. høyere fokus</li>
+              <li class="top-pitch__list-item">3. Økt prodktivitet</li>
+            </ol>
+          </div>
+          <base-button
+            class="top-pitch__button"
+            color="#fff"
+            bgColor="#050505"
+            hoverColor="#818181"
+            lipColor="#F84B40"
+            text="SE HVORDAN"
+          />
         </div>
       </div>
 
       <div class="leaderboard-container">
         <div class="leaderboard">
-          <img class="leaderboard__ground-shadow" src="~assets/about/leaderboard-ground-shadow.svg" alt="">
-          <img class="leaderboard__background" src="~assets/about/leaderborad -background.png" alt="">
+          <img
+            data-aos="fade-up" 
+            data-aos-delay="300" 
+            class="leaderboard__ground-shadow" 
+            src="~assets/about/leaderboard-ground-shadow.svg" 
+            alt="">
+          <img 
+            data-aos="fade-up" 
+            data-aos-delay="300" 
+            class="leaderboard__background" 
+            src="~assets/about/leaderborad -background.png" 
+            alt="">
           <div class="leaderboard__card-container">
-            <img class="leaderboard__card" src="~assets/about/leaderboard-card.png" alt="">
-            <img class="leaderboard__card-shadow" src="~assets/about/leaderboard-card-shadow.svg" alt="">
+            <img
+              data-aos="fade-down" 
+              data-aos-delay="600"  
+              class="leaderboard__card" 
+              src="~assets/about/leaderboard-card.png" 
+              alt="">
+            <img
+              data-aos="fade-up"
+              data-aos-delay="600"  
+              class="leaderboard__card-shadow" 
+              src="~assets/about/leaderboard-card-shadow.svg" 
+              alt="">
           </div>
           <div class="leaderboard__card-plain-container">
-            <img class="leaderboard__card-plain-shadow" src="~assets/about/leaderboard-card-shadow.svg" alt="">
-            <img class="leaderboard__card-plain" src="~assets/about/leadboard-card placeholders.png" alt="">
+            <img
+              data-aos="fade-up"
+              data-aos-delay="850"  
+              class="leaderboard__card-plain-shadow" 
+              src="~assets/about/leaderboard-card-shadow.svg" 
+              alt="">
+            <img
+              data-aos="fade-up"
+              data-aos-delay="850"  
+              class="leaderboard__card-plain" 
+              src="~assets/about/leadboard-card placeholders.png" 
+              alt="">
           </div>
         </div>
       </div>
+      
+
 
     </div>
   </q-page>
 </template>
 
 <script>
+import BaseButton from '../components/BaseButton'
+
 export default {
-  name: 'PageIndex'
+  name: 'PageIndex',
+  components:{
+    'base-button':BaseButton
+  }
 }
 </script>
 
@@ -57,23 +97,24 @@ export default {
 
     display grid
     grid-template-columns 3fr 1fr
-    // border solid #f00 4px
+
 
 
 
   .top-pitch-container
+    grid-row 1/2
 
   .top-pitch
+    margin-top 150px
     // background #dfd
     display grid
     justify-items center
     align-content center
-    position relative
+    
 
-    grid-column 1/2
 
     &__header-text
-      font-family: Montserrat;
+      font-family: Montserrat Bold;
       font-style: normal;
       font-weight: bold;
       font-size: 35.1808px;
@@ -85,40 +126,43 @@ export default {
       text-transform: uppercase;
 
       color: #050505;
+      margin-bottom 5px
+
+    &__arrow-and-list-container
+      position relative
     
     &__arrow
       position absolute
-      top 70px
-      right 10px
+      top -10px
+      left 100%
     
     &__order-list
-      // list-style-type decimal!important
-      // color red 
+      padding-left 0
 
     &__list-item
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: medium;
+      font-family: Montserrat Medium
       font-size: 27.8134px;
       line-height: 146.91%;
-      /* or 41px */
 
       letter-spacing: 0.14em;
       text-transform: uppercase;
 
       color: #F84B40;
 
+    &__button
+      margin-top 30px
 
 
 
 
   .leaderboard-container
-    // background #ddf
+  
+    -webkit-user-drag none
+    user-select none
     grid-column 2/3
     
     perspective 2000px
-    // transform translateY(100px)
-    // transform-origin: center right;
+
 
   .leaderboard
     max-width 500px
@@ -133,49 +177,59 @@ export default {
 
       display grid
 
-      // transform-origin: center right;
       transform translateY(-150px) 
       perspective 400px
     
     &__card
       user-select: none
+      -webkit-user-drag none 
+      position relative
+      left -100px
+      top 40px
       grid-row 1/2
       grid-column 1/2
 
-      width 310px
+      width 400px
       transform translateX(-60px) translateZ(100px) translateY(40px)
 
     &__card-shadow
       user-select: none
+      -webkit-user-drag none 
+      z-index -1
       grid-row 1/2
       grid-column 1/2
       
 
     &__card-plain-container
-      user-select: none
       grid-row 1/2
       grid-column 1/2
 
       display grid
 
-      transform translateY(-50px)
+      transform translateY(-10px)
       perspective 600px
       
     &__card-plain
       user-select: none
-      width 303px
+      -webkit-user-drag none 
       grid-row 1/2
       grid-column 1/2
+      position relative
+      left -50px
+      top 10px
+      width 343px
       transform translateX(-20px) translateZ(100px) translateY(40px)
     
     &__card-plain-shadow
       user-select: none
+      -webkit-user-drag none 
       grid-row 1/2
       grid-column 1/2
 
 
     &__background
       user-select: none
+      -webkit-user-drag none 
       grid-row 1/2
       grid-column 1/2
 
@@ -183,13 +237,13 @@ export default {
 
     &__ground-shadow
       user-select: none
-      // grid-row 1/2
-      // grid-column 1/2
-      transform translateY(-160px)
-      opacity 0.7
+      -webkit-user-drag none 
+      position relative
+      top -130px
+      transform translateY(-130px)
+      opacity 0
       z-index -1
 
 
-  // .leaderboard-container
-  //   padding-bottom 400px!important
+
 </style>
