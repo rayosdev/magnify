@@ -2,67 +2,52 @@
   <q-page>
     <TopPitch />
     <Recognition />
-    <div class="gamefy-container">
-      <div class="gamefy-section__top-cutout top-cutout">
-        <div class="top-cutout__left-background"></div>
-        <div class="top-cutout__center-background"></div>
-        <div class="top-cutout__right-background"></div>
-      </div>
+    <Gamefy />
+    <div class="container">
+      <div class="container__center">
 
-      <div class="gamefy-container__center gamefy">
-        <img class="gamefy__arrow-down" src="~assets/gamefy/arrow-down.svg" alt="">
-        <p class="gamefy__head-paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        <div
+          data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-anchor-placement="top-center"
+          class="header-card-container"
+        >
+          <div class="header-card">
+            <img class="header-card__image" src="~assets/focus/image-man-with-surface.jpg" alt="">
+            <div class="header-card__title-background">
+              <h1 class="header-card__title-text">Fokus</h1>
+            </div>
+          </div>
+        </div>
+        <p class="header-card__byline">
+            For fremgang må du se hvor du har vært og hvor du skal hen
         </p>
 
-        <div class="gamefy__card-container">
-
-          <div 
-            data-aos="fade-down"
-            data-aos-offset="0"
-            data-aos-anchor-placement="top-center" 
-            class="gamefy__card"
-            >
-            <h2 class="gamefy__card-header">Progresjon</h2>
-            <img class="gamefy__card-image" src="~assets/gamefy/progress-bar.svg" alt="">
-            <p class="gamefy__card-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            </p>
-          </div>
-          
-          <div 
-            data-aos="fade-down"
-            data-aos-offset="300"
-            data-aos-anchor-placement="top-center" 
-            class="gamefy__card"
-            >
-            <h2 class="gamefy__card-header">Konkurranser</h2>
-            <img src="~assets/gamefy/competition-cars.svg" alt="" class="gamefy__card-image">
-            <p class="gamefy__card-paragraph">
-              Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua. 
-            </p>
-          </div>
-          
-          <div 
-            data-aos="fade-down"
-            data-aos-offset="600"
-            data-aos-anchor-placement="top-center" 
-            class="gamefy__card"
-            >
-            <h2 class="gamefy__card-header">Markeringer</h2>
-            <img src="~assets/gamefy/medal-runner.svg" alt="" class="gamefy__card-image">
-            <p class="gamefy__card-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  et dolore magna aliqua. 
-            </p>
-          </div>
-        
+        <div class="focus-article focus-article--article1">
+          <h2 class="focus-article__header">
+            Mål Påmindelse
+          </h2>
+          <img class="focus-article__image" src="~assets/focus/reminder-finger.svg" alt="">
+          <p class="focus-article__paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          </p>
         </div>
-      
-        <img class="gamefy__cutout-down" src="~assets/gamefy/cutout-down.svg" alt="">
+
+        <div class="focus-article focus-article--article2">
+          <h2 class="focus-article__header">
+            Progresjon over tid
+          </h2>
+          <img class="focus-article__image" src="~assets/focus/progression-graph.svg" alt="">
+          <p class="focus-article__paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          </p>
+        </div>
+
+        <img class="block-decorations" src="~assets/focus/block-decorations.svg" alt="">
 
       </div>
     </div>
-    
+
 
   </q-page>
 </template>
@@ -70,12 +55,14 @@
 <script>
 import TopPitch from "../components/index/TopPitch"
 import Recognition from "../components/index/Recognition"
+import Gamefy from "../components/index/Gamefy"
 
 export default {
   name: "PageIndex",
   components: {
     TopPitch,
-    Recognition
+    Recognition,
+    Gamefy
   }
 }
 </script>
@@ -85,110 +72,127 @@ export default {
 .q-page
   margin-bottom 100vh
 
-
-.top-cutout
-  display grid
-  grid-template-columns auto minmax(100px,max-content) auto
-  height 90px
-
-
-  &__left-background
-    grid-row 1/2
-    grid-column 1/2
-    width 100%
-    height 100%
-    background: linear-gradient(180deg, #B63830 0%, #C23B33 100%);
-
-  &__center-background
-    grid-row 1/2
-    grid-column 2/3
-    width $big-desktop-width
-    height 100%
-    background: linear-gradient(180deg, #B63830 0%, #C23B33 100%);
-    mask url('../assets/gamefy/cutout-mask-down.svg')
-    mask-size cover auto
-
-  &__right-background
-    grid-row 1/2
-    grid-column 3/4
-    width 100%
-    height 100%
-    background: linear-gradient(180deg, #B63830 0%, #C23B33 100%);
-
-.gamefy-container
-  background: #333333;
+.container
 
   &__center
-    min-height: 1150px;
     margin 0 auto
     max-width $big-desktop-width
     display grid
+    grid-gap 50px
     grid-template-columns 1fr 1fr
-    height 100%
 
-.gamefy
+.header-card-container
+  justify-self center
+  grid-column 2/3
 
-  &__head-paragraph
-    grid-row 1/2
-    grid-column 1/3
-    width 490px
-    font-family: Open Sans;
-    font-size: 15.9px;
-    line-height: 229.69%;
+.header-card
+  position relative
+  top -20px
+  width 550px
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display grid
 
-    text-align: center;
-    letter-spacing: 0.11em;
-    justify-self center
-    margin-top 40px
-
-    color: #FFFFFF;
-  
-  &__arrow-down
+  &__image
     grid-row 1/2
     grid-column 1/2
-    position relative
-    top 100px
-    justify-self center
+    min-height 366px
+    width 100%
 
-  &__card-container
-    margin 0 70px
-    margin-top 120px
-    grid-column 1/3
+  &__title-background
+    grid-row 1/2
+    grid-column 1/2
+    height 150px
+    width 100%
+    background rgba(248, 75, 64, 0.756)
+    align-self end
     display flex
-    // border solid #f00 4px
-    justify-content space-between
-
-  &__card
-    max-width 350px
-    max-height 500px
-    display grid 
-    grid-template-rows 1fr 2fr 4fr
-    text-align center
     justify-content center
     align-items center
-    color #fff
 
-  &__card-header
-    font-family: Montserrat;
-    font-size: 33.7584px;
+  &__title-text
+    font-family: Sansation;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30.5642px;
+    line-height: 34px;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+
+    color: #FFFFFF
+
+
+  &__byline
+    font-family: Open Sans Semi Bold;
+    font-size: 23px;
     line-height: 167.69%;
     letter-spacing: 0.055em;
 
-  &__card-image
-    justify-self center
+    color: #333333;
 
-  &__card-paragraph
-    font-family: Open Sans Light
-    font-size: 15.9px;
+    width 550px
+    text-align center
+    justify-self center
+    padding 0 20px
+    margin-top 10px
+
+    grid-row 2/3
+    grid-column 2/3
+
+
+.focus-article
+  justify-self center
+  align-self center
+
+  max-width 411px
+  display grid
+  grid-template-rows 1fr 2fr 4fr
+
+
+  &__header
+    justify-self center
+    font-family: Montserrat Medium;
+    font-size: 33.7584px;
+    line-height: 167.69%;
+    text-align: center;
+    letter-spacing: 0.055em;
+
+    color: #8F2D27;
+
+  &__image
+    justify-self center
+    align-self center
+
+  &__paragraph
+    font-family: Open Sans Semi Bold
+    font-size: 15.905px;
     line-height: 229.69%;
+    text-align: center;
+    letter-spacing: 0.11em;
 
-    letter-spacing: 0.18em;
+    color: #333333;
 
-  &__cutout-down
-    position relative
-    top 58px
-    left -20px
-    justify-self center
-    align-self end
+  &--article1
+    margin-top 100px
+    grid-row 2/4
+    grid-column 1/2
+    align-self start
+
+
+  &--article2
+    margin-top -300px
+    align-self start
+    grid-row 4/5
+    grid-column 2/3
+
+.block-decorations
+  margin-top -100px
+  grid-row 4/5
+  grid-column 1/2
+  align-self center
+  justify-self center
+
+
+
+
 
 </style>

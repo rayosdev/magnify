@@ -14,14 +14,15 @@
             data-aos-anchor-placement="top-center"
             class="header-card-container">
             <div class="header-card">
-              <img class="header-card__image" src="~assets/recognition/image-man-with-headset.png" alt="">
+              <img class="header-card__image" src="~assets/recognition/image-man-with-headset.jpg" alt="">
               <div class="header-card__title-background">
                 <h1 class="header-card__title-text">anErkjeNnelse</h1>
               </div>
             </div>
-
           </div>
-          <p class="header-card__byline">Nøkkelen til økt motivasjon og arbeidsglede</p>
+        <p class="header-card__byline">
+            Nøkkelen til økt motivasjon og arbeidsglede
+        </p>
           
           <img class="block-decoration" src="~assets/recognition/block-decoration.svg" alt="">
 
@@ -29,7 +30,7 @@
             <img class="recognition-article__magnaglass-image" src="~assets/recognition/achivement-magaglass.svg" alt="">
             <h4 class="recognition-article__title">Hva er MAGNIFY?</h4>
             <p class="recognition-article__paragraph">
-              MAGNIFY er et salgsverktøy som er laget for å øke motivasjon, effektivitet og arbeidsglede i bedrifter som arbeider med salg og kundeservice.
+                MAGNIFY er et salgsverktøy som er laget for å øke motivasjon, effektivitet og arbeidsglede i bedrifter som arbeider med salg og kundeservice.
             </p>
             <p class="recognition-article__paragraph">
                 Ved bruk av salgsverktøyet kan salgsteamet få full oversikt over ledertabeller. Det er også enkelt å sette felles eller personlige mål, arrangere konkurranser, måle fremgang og anerkjenne milepæler etter egne preferanser. 
