@@ -87,10 +87,10 @@ export default {
     openURL,
     handelScroll: function(evt, el) {
       if(window.scrollY > 50){
-        console.log("active", window.scrollY)
+        // console.log("active", window.scrollY)
         this.smallHeader = true
       }else{
-        console.log("deactive", window.scrollY)
+        // console.log("deactive", window.scrollY)
         this.smallHeader = false
       }
     }
