@@ -55,12 +55,12 @@
 
 .container
 
-  &__center
-    margin 0 auto
-    max-width $big-desktop-width
-    display grid
-    grid-gap 50px
-    grid-template-columns 1fr 1fr
+    &__center
+        margin 0 auto
+        max-width $big-desktop-width
+        display grid
+        grid-gap 50px
+        grid-template-columns 1fr 1fr
 
 .header-card-container
   justify-self center
@@ -161,12 +161,13 @@
 
   &--article2
     margin-top -300px
+    margin-bottom 150px
     align-self start
     grid-row 4/5
     grid-column 2/3
 
 .block-decorations
-  margin-top -100px
+  margin-top -250px
   grid-row 4/5
   grid-column 1/2
   align-self center

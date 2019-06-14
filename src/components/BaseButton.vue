@@ -50,10 +50,10 @@ export default {
         border-color #fff
         border-radius: 4px;
         font-weight: bold;
-        line-height: 17px;
-        display: flex;
-        align-items: center;
+        line-height: 17px;;
         text-align: center;
+        text-decoration: none;
+        display: inline-block;
         letter-spacing: 0.075em;
         text-transform: uppercase;
         font-size 15px
@@ -63,6 +63,7 @@ export default {
         transition 0.2s
         user-select none 
         -webkit-user-drag none
+        
 
         &:hover
           transition 0.3s
