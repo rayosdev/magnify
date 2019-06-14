@@ -37,7 +37,7 @@
             </p>
           </div>
 
-          <img src="" alt="">
+          <img class="gamefication-title-graphic" src="~assets/recognition/gamefication-title-graphic.svg" alt="">
 
         </div>
 
@@ -217,6 +217,15 @@ export default {
     color: #FFFFFF;
 
     margin-bottom 60px
+
+
+.gamefication-title-graphic
+    margin-top 80px
+    grid-column 1/3
+    grid-row 5/6
+
+    justify-self center
+
 
 
 </style>
