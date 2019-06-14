@@ -9,8 +9,11 @@
         <div class="top-cutout__right-background"></div>
       </div>
 
-      <div class="gamefy-container__center">
-        <img src="~assets/gamefy/arrow-down.svg" alt="">
+      <div class="gamefy-container__center gamefy">
+        <img class="gamefy__arrow-down" src="~assets/gamefy/arrow-down.svg" alt="">
+        <p class="gamefy__head-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        </p>
       </div>
     </div>
     
@@ -36,12 +39,6 @@ export default {
 .q-page
   margin-bottom 100vh
 
-
-
-.gamefy-container
-  height: 1300px;
-
-  background: #333333;
 
 .top-cutout
   display grid
@@ -72,11 +69,39 @@ export default {
     height 100%
     background: linear-gradient(180deg, #B63830 0%, #C23B33 100%);
 
+.gamefy-container
+  min-height: 1300px;
+  background: #333333;
 
   &__center
     margin 0 auto
     max-width $big-desktop-width
     display grid
     grid-template-columns 1fr 1fr
+
+.gamefy
+
+  &__head-paragraph
+    grid-row 1/2
+    grid-column 1/3
+    width 490px
+    font-family: Open Sans;
+    font-size: 15.9px;
+    line-height: 229.69%;
+
+    text-align: center;
+    letter-spacing: 0.11em;
+    justify-self center
+    margin-top 40px
+
+    color: #FFFFFF;
+  
+  &__arrow-down
+    grid-row 1/2
+    grid-column 1/2
+    position relative
+    top 60px
+    justify-self center
+
 
 </style>

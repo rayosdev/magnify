@@ -10,7 +10,7 @@
 
           <div
             data-aos="fade-up"
-            data-aos-anchor-placement="bottom-center"
+            data-aos-anchor-placement="top-center"
             class="header-card-container">
             <div class="header-card">
               <img class="header-card__image" src="~assets/recognition/image-man-with-headset.png" alt="">
@@ -37,7 +37,7 @@
 
           <img
             data-aos="fade-up"
-            data-aos-anchor-placement="bottom-center" 
+            data-aos-anchor-placement="top-center" 
             class="gamefication-title-graphic" 
             src="~assets/recognition/gamefication-title-graphic.svg" a
             lt=""
