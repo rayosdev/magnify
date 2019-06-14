@@ -127,8 +127,8 @@ export default {
     transition $morph-time
 
     &--small
-      opacity 0.8
       transition $morph-time
+      
 
     .header-contianer
       // border #F00 solid 4px

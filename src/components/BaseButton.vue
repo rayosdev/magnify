@@ -1,45 +1,41 @@
 <template>
-    <button
-        ref="button"
-        @mouseover="hover(true)"
-        @mouseleave="hover(false)"
-        v-bind:style="{
+  <button
+    ref="button"
+    @mouseover="hover(true)"
+    @mouseleave="hover(false)"
+    v-bind:style="{
             ...bgc,
             color: color,
             borderColor: lipColor
         }"
-    >{{text}}</button>
+  >{{text}}</button>
 </template>
 
 <script>
 export default {
-    name: 'BaseButton',
-    props:['text','color','bgColor','hoverColor','lipColor'],
-    data(){
-        return {
-            bgc:{
-                backgroundColor:this.bgColor,
-            }
-        }
-    },
-    methods:{
-        hover: function(isHovering){
-            if(isHovering){
-                this.bgc = {backgroundColor:this.hoverColor}
-            }
-            else{
-                this.bgc = {backgroundColor:this.bgColor}
-            }
-        }
-    },
-    created(){
-        console.log("button is here!§!!!!!!!!!")
-    },
-    mounted() {
-
-        
-    },
-}
+  name: "BaseButton",
+  props: ["text", "color", "bgColor", "hoverColor", "lipColor"],
+  data() {
+    return {
+      bgc: {
+        backgroundColor: this.bgColor
+      }
+    };
+  },
+  methods: {
+    hover: function(isHovering) {
+      if (isHovering) {
+        this.bgc = { backgroundColor: this.hoverColor };
+      } else {
+        this.bgc = { backgroundColor: this.bgColor };
+      }
+    }
+  },
+  created() {
+    console.log("button is here!§!!!!!!!!!");
+  },
+  mounted() {}
+};
 </script>
 
 <style lang="stylus" scoped>

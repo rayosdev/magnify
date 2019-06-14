@@ -1,249 +1,222 @@
 <template>
-  <!-- <q-page class="flex flex-center"> -->
-  <q-page class="">
-    <!-- <img alt="Quasar logo" src="~assets/quasar-logo-full.svg"> -->
+  <q-page>
+    <TopPitch />
     <div class="container">
-
-      <div class="top-pitch-container">
-        
-        <div class="top-pitch">
-          <h1 class="top-pitch__header-text">magnify gir ditt team</h1>
-          <div class="top-pitch__arrow-and-list-container">
-            <img class="top-pitch__arrow" src="~assets/about/home-magnify-arrow-top-section.svg" alt="">
-            <ol class="top-pitch__order-list">
-              <li class="top-pitch__list-item">1. Mer Motivasjon</li>
-              <li class="top-pitch__list-item">2. høyere fokus</li>
-              <li class="top-pitch__list-item">3. Økt prodktivitet</li>
-            </ol>
-          </div>
-          <base-button
-            class="top-pitch__button"
-            color="#fff"
-            bgColor="#050505"
-            hoverColor="#818181"
-            lipColor="#F84B40"
-            text="SE HVORDAN"
-          />
-        </div>
+      <div class="recognition-section__top-cutout top-cutout">
+        <div class="top-cutout__left-background"></div>
+        <div class="top-cutout__center-background"></div>
+        <div class="top-cutout__right-background"></div>
       </div>
+      <div class="content-container">
+        <div class="content-container__center">
 
-      <div class="leaderboard-container">
-        <div class="leaderboard">
-          <img
-            data-aos="fade-up" 
-            data-aos-delay="300" 
-            class="leaderboard__ground-shadow" 
-            src="~assets/about/leaderboard-ground-shadow.svg" 
-            alt="">
-          <img 
-            data-aos="fade-up" 
-            data-aos-delay="300" 
-            class="leaderboard__background" 
-            src="~assets/about/leaderborad -background.png" 
-            alt="">
-          <div class="leaderboard__card-container">
-            <img
-              data-aos="fade-down" 
-              data-aos-delay="600"  
-              class="leaderboard__card" 
-              src="~assets/about/leaderboard-card.png" 
-              alt="">
-            <img
-              data-aos="fade-up"
-              data-aos-delay="600"  
-              class="leaderboard__card-shadow" 
-              src="~assets/about/leaderboard-card-shadow.svg" 
-              alt="">
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+            class="header-card-container">
+            <div class="header-card">
+              <img class="header-card__image" src="~assets/recognition/image-man-with-headset.png" alt="">
+              <div class="header-card__title-background">
+                <h1 class="header-card__title-text">anErkjeNnelse</h1>
+              </div>
+            </div>
+
           </div>
-          <div class="leaderboard__card-plain-container">
-            <img
-              data-aos="fade-up"
-              data-aos-delay="850"  
-              class="leaderboard__card-plain-shadow" 
-              src="~assets/about/leaderboard-card-shadow.svg" 
-              alt="">
-            <img
-              data-aos="fade-up"
-              data-aos-delay="850"  
-              class="leaderboard__card-plain" 
-              src="~assets/about/leadboard-card placeholders.png" 
-              alt="">
+          <p class="header-card__byline">Nøkkelen til økt motivasjon og arbeidsglede</p>
+          
+          <img class="block-decoration" src="~assets/recognition/block-decoration.svg" alt="">
+
+          <div class="recognition-article">
+            <img class="recognition-article__magnaglass-image" src="~assets/recognition/achivement-magaglass.svg" alt="">
+            <h4 class="recognition-article__title">Hva er MAGNIFY?</h4>
+            <p class="recognition-article__paragraph">
+              MAGNIFY er et salgsverktøy som er laget for å øke motivasjon, effektivitet og arbeidsglede i bedrifter som arbeider med salg og kundeservice.
+            </p>
+            <p class="recognition-article__paragraph">
+                Ved bruk av salgsverktøyet kan salgsteamet få full oversikt over ledertabeller. Det er også enkelt å sette felles eller personlige mål, arrangere konkurranser, måle fremgang og anerkjenne milepæler etter egne preferanser. 
+            </p>
           </div>
+
+          <img src="" alt="">
+
         </div>
+
       </div>
-      
-
-
     </div>
+
   </q-page>
 </template>
 
 <script>
-import BaseButton from '../components/BaseButton'
+import TopPitch from "../components/index/TopPitch";
 
 export default {
-  name: 'PageIndex',
-  components:{
-    'base-button':BaseButton
+  name: "PageIndex",
+  components: {
+    TopPitch
   }
-}
+};
 </script>
 
 <style lang="stylus" scoped>
 
-  .container
-    max-width $big-desktop-width
-    margin 0 auto
+.q-page
+  margin-bottom 100vh
 
-    display grid
-    grid-template-columns 3fr 1fr
+// .recognition-section__top-cutout
+
+.top-cutout
+  // display grid!important
+  display grid
+  // grid-template-columns auto $big-desktop-width auto
+  grid-template-columns auto minmax(100px,max-content) auto
+  height 90px
 
 
-
-
-  .top-pitch-container
+  &__left-background
     grid-row 1/2
+    grid-column 1/2
+    width 100%
+    height 100%
+    background: linear-gradient(180deg, #8F2D27 0%, #8F2D27 100%)
 
-  .top-pitch
-    margin-top 150px
-    // background #dfd
-    display grid
-    justify-items center
-    align-content center
-    
-
-
-    &__header-text
-      font-family: Montserrat Bold;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 35.1808px;
-      line-height: 146.91%;
-      /* identical to box height, or 52px */
-
-      text-align: center;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-
-      color: #050505;
-      margin-bottom 5px
-
-    &__arrow-and-list-container
-      position relative
-    
-    &__arrow
-      position absolute
-      top -10px
-      left 100%
-    
-    &__order-list
-      padding-left 0
-
-    &__list-item
-      font-family: Montserrat Medium
-      font-size: 27.8134px;
-      line-height: 146.91%;
-
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-
-      color: #F84B40;
-
-    &__button
-      margin-top 30px
-
-
-
-
-  .leaderboard-container
-  
-    -webkit-user-drag none
-    user-select none
+  &__center-background
+    grid-row 1/2
     grid-column 2/3
-    
-    perspective 2000px
+    width $big-desktop-width
+    height 100%
+    background: linear-gradient(180deg, #8F2D27 0%, #8F2D27 100%)
+    mask url('../assets/recognition/top-cutout-mask.svg')
+    mask-size cover auto
+
+  &__right-background
+    grid-row 1/2
+    grid-column 3/4
+    width 100%
+    height 100%
+    background: linear-gradient(180deg, #8F2D27 0%, #8F2D27 100%)
 
 
-  .leaderboard
-    max-width 500px
+.content-container
+  height 1200px
+  background: linear-gradient(180deg, #8F2D27 63.45%, #B63830 100%)
+
+  &__center
+    margin 0 auto
+    max-width $big-desktop-width
     display grid
-    justify-items center
+    grid-template-columns 1fr 1fr
+
+
+.header-card-container
+  position relative
+
+.header-card
+  position relative
+  top -105px
+  width 550px
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display grid
+
+  &__image
+    grid-row 1/2
+    grid-column 1/2
+    min-height 366px
+    width 100%
+
+  &__title-background
+    grid-row 1/2
+    grid-column 1/2
+    height 150px
+    width 100%
+    background rgba(248, 75, 64, 0.756)
+    align-self end
+    display flex
+    justify-content center
     align-items center
-    transform rotateY(-60deg) rotateZ(15deg) rotateX(-8deg) translateY(100px) translateX(-200px)
 
-    &__card-container
-      grid-row 1/2
-      grid-column 1/2
+  &__title-text
+    font-family: Sansation;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30.5642px;
+    line-height: 34px;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
 
-      display grid
+    color: #FFFFFF
 
-      transform translateY(-150px) 
-      perspective 400px
+  &__byline
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 167.69%;
+    /* or 39px */
+
+    // display: flex;
+    // align-items: center;
+    // text-align: center;
+    letter-spacing: 0.055em;
+
+    color: #FFFFFF;
+
+    width 550px
+    text-align center
+    padding 0 20px
+    margin-top -50px
+
+    grid-row 2/3
+
+.block-decoration
+  justify-self center
+  margin-bottom -130px
+  margin-right 80px
+  grid-column 1/2
+  grid-row 3/5
+  
+
+.recognition-article
+  grid-column 2/3
+  grid-row 2/5
+
+  justify-self center
+  
+  padding 0 120px
+  display grid
+  align-items center
+  justify-items center
+
+  &__magnaglass-image
+    width 150px
     
-    &__card
-      user-select: none
-      -webkit-user-drag none 
-      position relative
-      left -100px
-      top 40px
-      grid-row 1/2
-      grid-column 1/2
 
-      width 400px
-      transform translateX(-60px) translateZ(100px) translateY(40px)
+  &__title
+    font-family: Open Sans Bold
+    font-size: 15.905px;
+    line-height: 229.69%;
+    /* or 37px */
 
-    &__card-shadow
-      user-select: none
-      -webkit-user-drag none 
-      z-index -1
-      grid-row 1/2
-      grid-column 1/2
-      
+    letter-spacing: 0.11em;
 
-    &__card-plain-container
-      grid-row 1/2
-      grid-column 1/2
+    color: #FFFFFF;
 
-      display grid
-
-      transform translateY(-10px)
-      perspective 600px
-      
-    &__card-plain
-      user-select: none
-      -webkit-user-drag none 
-      grid-row 1/2
-      grid-column 1/2
-      position relative
-      left -50px
-      top 10px
-      width 343px
-      transform translateX(-20px) translateZ(100px) translateY(40px)
-    
-    &__card-plain-shadow
-      user-select: none
-      -webkit-user-drag none 
-      grid-row 1/2
-      grid-column 1/2
+    margin 40px 0
 
 
-    &__background
-      user-select: none
-      -webkit-user-drag none 
-      grid-row 1/2
-      grid-column 1/2
+  &__paragraph
 
-      width  444px
+    font-family: Open Sans;
+    font-size: 15.905px;
+    line-height: 229.69%;
+    /* or 37px */
 
-    &__ground-shadow
-      user-select: none
-      -webkit-user-drag none 
-      position relative
-      top -130px
-      transform translateY(-130px)
-      opacity 0
-      z-index -1
+    text-align: center;
+    letter-spacing: 0.11em;
 
+    color: #FFFFFF;
+
+    margin-bottom 60px
 
 
 </style>
