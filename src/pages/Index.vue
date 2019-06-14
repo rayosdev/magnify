@@ -17,7 +17,12 @@
 
         <div class="gamefy__card-container">
 
-          <div class="gamefy__card">
+          <div 
+            data-aos="fade-down"
+            data-aos-offset="0"
+            data-aos-anchor-placement="top-center" 
+            class="gamefy__card"
+            >
             <h2 class="gamefy__card-header">Progresjon</h2>
             <img class="gamefy__card-image" src="~assets/gamefy/progress-bar.svg" alt="">
             <p class="gamefy__card-paragraph">
@@ -25,7 +30,12 @@
             </p>
           </div>
           
-          <div class="gamefy__card">
+          <div 
+            data-aos="fade-down"
+            data-aos-offset="300"
+            data-aos-anchor-placement="top-center" 
+            class="gamefy__card"
+            >
             <h2 class="gamefy__card-header">Konkurranser</h2>
             <img src="~assets/gamefy/competition-cars.svg" alt="" class="gamefy__card-image">
             <p class="gamefy__card-paragraph">
@@ -33,7 +43,12 @@
             </p>
           </div>
           
-          <div class="gamefy__card">
+          <div 
+            data-aos="fade-down"
+            data-aos-offset="600"
+            data-aos-anchor-placement="top-center" 
+            class="gamefy__card"
+            >
             <h2 class="gamefy__card-header">Markeringer</h2>
             <img src="~assets/gamefy/medal-runner.svg" alt="" class="gamefy__card-image">
             <p class="gamefy__card-paragraph">
@@ -101,14 +116,15 @@ export default {
     background: linear-gradient(180deg, #B63830 0%, #C23B33 100%);
 
 .gamefy-container
-  min-height: 1300px;
   background: #333333;
 
   &__center
+    min-height: 1150px;
     margin 0 auto
     max-width $big-desktop-width
     display grid
     grid-template-columns 1fr 1fr
+    height 100%
 
 .gamefy
 
@@ -131,7 +147,7 @@ export default {
     grid-row 1/2
     grid-column 1/2
     position relative
-    top 60px
+    top 100px
     justify-self center
 
   &__card-container
@@ -161,6 +177,18 @@ export default {
   &__card-image
     justify-self center
 
+  &__card-paragraph
+    font-family: Open Sans Light
+    font-size: 15.9px;
+    line-height: 229.69%;
 
+    letter-spacing: 0.18em;
+
+  &__cutout-down
+    position relative
+    top 58px
+    left -20px
+    justify-self center
+    align-self end
 
 </style>
