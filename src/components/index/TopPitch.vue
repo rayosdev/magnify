@@ -22,7 +22,7 @@
           <base-button
             class="top-pitch__button"
             color="#fff"
-            bgcolor="#050505"
+            bgColor="#050505"
             hoverColor="#818181"
             lipColor="#F84B40"
             text="SE HVORDAN"
@@ -90,7 +90,7 @@ import BaseButton from "../BaseButton";
 export default {
   name: "TopPitch",
   components: {
-    "base-button": BaseButton
+    BaseButton
   }
 };
 </script>

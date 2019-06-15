@@ -32,7 +32,7 @@ export default {
     }
   },
   created() {
-    console.log("button is here!§!!!!!!!!!");
+    // console.log("button is here!§!!!!!!!!!");
   },
   mounted() {}
 };
@@ -41,31 +41,31 @@ export default {
 <style lang="stylus" scoped>
     
 
-    button
-        font-family Sansation
-        cursor pointer
-        background: #333;
-        border none
-        border-bottom 2px solid 
-        border-color #fff
-        border-radius: 4px;
-        font-weight: bold;
-        line-height: 17px;;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        letter-spacing: 0.075em;
-        text-transform: uppercase;
-        font-size 15px
-        
-        color #fff
-        padding 15px 20px
-        transition 0.2s
-        user-select none 
-        -webkit-user-drag none
-        
+button
+  font-family Sansation
+  cursor pointer
+  background: #333;
+  border none
+  border-bottom 2px solid 
+  border-color #fff
+  border-radius: 4px;
+  font-weight: bold;
+  line-height: 17px;;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  font-size 15px
 
-        &:hover
-          transition 0.3s
-          background #555    
+  color #fff
+  padding 15px 20px
+  transition 0.2s
+  user-select none 
+  -webkit-user-drag none
+
+
+&:hover
+  transition 0.3s
+  background #555    
 </style>

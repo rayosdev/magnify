@@ -98,7 +98,7 @@
 </template>
 
 <script>
-import BaseButton from "../../components/Basebutton"
+import BaseButton from "../../components/BaseButton"
 
     export default {
         name: "Summary",

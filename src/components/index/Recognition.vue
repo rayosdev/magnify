@@ -1,19 +1,16 @@
 <template>
     <div class="container">
       <div id="#link-target-recognition"></div>
-      <div class="recognition-section__top-cutout top-cutout">
-        <div class="top-cutout__left-background"></div>
-        <div class="top-cutout__center-background"></div>
-        <div class="top-cutout__right-background"></div>
-      </div>
       <div class="content-container">
         <div class="content-container__center">
+          <img class="header__cutout-down" src="~assets/recognition/cutout-down-recognition.svg" alt="">
 
           <div
+            class="header-card-container"
             data-aos="fade-up"
             data-aos-offset="100"
             data-aos-anchor-placement="top-center"
-            class="header-card-container">
+          >
             <div class="header-card">
               <img class="header-card__image" src="~assets/recognition/image-man-with-headset.jpg" alt="">
               <div class="header-card__title-background">
@@ -62,39 +59,39 @@
 
 <style lang="stylus" scoped>
 
-#link-target-summary
-  border solid 43px #00f
-  top -300px
-  position relative
+// #link-target-summary
+//   border solid 43px #00f
+  // top -300px
+  // position relative
 
-.top-cutout
-  display grid
-  grid-template-columns auto minmax(100px,max-content) auto
-  height 90px
+// .top-cutout
+//   display grid
+//   grid-template-columns auto minmax(100px,max-content) auto
+//   height 90px
 
 
-  &__left-background
-    grid-row 1/2
-    grid-column 1/2
-    width 100%
-    height 100%
-    background: linear-gradient(180deg, #8F2D27 0%, #8F2D27 100%)
+//   &__left-background
+//     grid-row 1/2
+//     grid-column 1/2
+//     width 100%
+//     height 100%
+//     background: linear-gradient(180deg, #8F2D27 0%, #8F2D27 100%)
 
-  &__center-background
-    grid-row 1/2
-    grid-column 2/3
-    width $big-desktop-width
-    height 100%
-    background: linear-gradient(180deg, #8F2D27 0%, #8F2D27 100%)
-    mask url('../../assets/recognition/top-cutout-mask.svg')
-    mask-size cover auto
+//   &__center-background
+//     grid-row 1/2
+//     grid-column 2/3
+//     width $big-desktop-width
+//     height 100%
+//     background: linear-gradient(180deg, #8F2D27 0%, #8F2D27 100%)
+//     mask url('../../assets/recognition/top-cutout-mask.svg')
+//     mask-size cover auto
 
-  &__right-background
-    grid-row 1/2
-    grid-column 3/4
-    width 100%
-    height 100%
-    background: linear-gradient(180deg, #8F2D27 0%, #8F2D27 100%)
+//   &__right-background
+//     grid-row 1/2
+//     grid-column 3/4
+//     width 100%
+//     height 100%
+//     background: linear-gradient(180deg, #8F2D27 0%, #8F2D27 100%)
 
 
 .content-container
@@ -108,12 +105,20 @@
     grid-template-columns 1fr 1fr
 
 
+.header__cutout-down
+  grid-row 1/2
+  grid-column 2/3
+  margin-left 130px
+  // left 
+  // border solid 45px #00f
+
+
 .header-card-container
-  position relative
+  // position relative
 
 .header-card
   position relative
-  top -105px
+  top -15px
   width 550px
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display grid
@@ -164,7 +169,7 @@
     width 550px
     text-align center
     padding 0 20px
-    margin-top -50px
+    margin-top 50px
 
     grid-row 2/3
 

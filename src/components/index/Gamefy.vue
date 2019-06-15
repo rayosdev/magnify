@@ -7,6 +7,8 @@
       </div>
 
       <div class="gamefy-container__center gamefy">
+        <img class="gamefy__cutout-up" src="~assets/gamefy/cutout-up-gamefication.svg" alt="">
+
         <img class="gamefy__arrow-down" src="~assets/gamefy/arrow-down.svg" alt="">
         <p class="gamefy__head-paragraph">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -88,8 +90,8 @@
     width $big-desktop-width
     height 100%
     background: linear-gradient(180deg, #B63830 0%, #C23B33 100%);
-    mask url('../../assets/gamefy/cutout-mask-down.svg')
-    mask-size cover auto
+    // mask url('../../assets/gamefy/cutout-mask-down.svg')
+    // mask-size cover auto
 
   &__right-background
     grid-row 1/2
@@ -110,6 +112,15 @@
     height 100%
 
 .gamefy
+
+  &__cutout-up
+    // border solid 3px #00f
+    grid-row 1/2
+    grid-column 1/3
+    justify-self center
+    position relative
+    top -50px
+
 
   &__head-paragraph
     grid-row 1/2
