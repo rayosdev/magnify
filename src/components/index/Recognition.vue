@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+      <div id="#link-target-recognition"></div>
       <div class="recognition-section__top-cutout top-cutout">
         <div class="top-cutout__left-background"></div>
         <div class="top-cutout__center-background"></div>
@@ -61,6 +62,10 @@
 
 <style lang="stylus" scoped>
 
+#link-target-summary
+  border solid 43px #00f
+  top -300px
+  position relative
 
 .top-cutout
   display grid

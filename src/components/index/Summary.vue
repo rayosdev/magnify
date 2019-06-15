@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+      <div id="link-target-summary"></div>
       <div class="container__center">
 
         <img class="cutout-up" src="~assets/summary/cutout-up.svg" alt="">
@@ -27,7 +28,7 @@
             </h2>
             <p class="summary-card__paragraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              <a class="summary-card__link" href="">Se mer</a>
+              <a class="summary-card__link" href="link-target-recognition">Se mer</a>
             </p>
           </div>
           
@@ -38,7 +39,7 @@
             </h2>
             <p class="summary-card__paragraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              <a class="summary-card__link" href="">Se mer</a>
+              <a class="summary-card__link" href="link-target-gamefy">Se mer</a>
             </p>
           </div>
           
@@ -49,7 +50,7 @@
             </h2>
             <p class="summary-card__paragraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              <a class="summary-card__link" href="">Se mer</a>
+              <a class="summary-card__link" href="link-target-focus">Se mer</a>
             </p>
           </div>
 
@@ -68,7 +69,7 @@
               Se ditaljer om produktet 
               <a 
                 class="final-pitch__product-paragraph-link" 
-                href=""
+                href="#link-target-"
               >her</a>
             </p>
             <p class="final-pitch__contact-paragraph">
@@ -110,10 +111,18 @@ import BaseButton from "../../components/Basebutton"
 
 <style lang="stylus" scoped>
 
+  
+#link-target-summary
+  // border solid 43px #00f
+  top -300px
+  position relative
+  
+
 .container  
   background: linear-gradient(180deg, #C13B33 0%, #8F2D27 34.68%);
 
   &__center
+    position relative
     margin 0 auto
     height: 1840.18px;
     max-width $big-desktop-width

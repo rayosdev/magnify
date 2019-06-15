@@ -15,11 +15,6 @@ export default {
   }
 }
 
-// Vue.directive('test', {
-//   bind(el, binding, vnode){
-//     el.style.color = "red"
-//   }
-// })
 </script>
 
 <style>

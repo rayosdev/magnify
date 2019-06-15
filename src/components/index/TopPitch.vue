@@ -18,6 +18,7 @@
               <li class="top-pitch__list-item">3. Økt prodktivitet</li>
             </ol>
           </div>
+          <a class="top-pitch__link-target" href="#link-target-summary">
           <base-button
             class="top-pitch__button"
             color="#fff"
@@ -26,6 +27,7 @@
             lipColor="#F84B40"
             text="SE HVORDAN"
           />
+          </a>
         </div>
       </div>
 
