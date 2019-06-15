@@ -49,10 +49,6 @@
           </ul>
         </nav>
 
-
-      <!-- <q-toolbar>
-
-      </q-toolbar> -->
       </div>
     </q-header>
 
@@ -62,11 +58,6 @@
     </q-page-container>
   </q-layout>
 </template>
-
-// <button clickable tag="a" class="header-nav__button">
-//                 logg inn
-//               </button>
-
 <script>
 import { openURL } from 'quasar'
 import { constants } from 'crypto';
