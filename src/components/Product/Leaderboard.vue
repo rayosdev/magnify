@@ -67,6 +67,7 @@ export default {
 .container
     max-width $big-desktop-width
     margin 0 auto
+    margin-bottom 180px
 
 
 .leaderboard-container

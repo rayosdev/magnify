@@ -58,41 +58,6 @@
 
 <style lang="stylus" scoped>
 
-// #link-target-summary
-//   border solid 43px #00f
-  // top -300px
-  // position relative
-
-// .top-cutout
-//   display grid
-//   grid-template-columns auto minmax(100px,max-content) auto
-//   height 90px
-
-
-//   &__left-background
-//     grid-row 1/2
-//     grid-column 1/2
-//     width 100%
-//     height 100%
-//     background: linear-gradient(180deg, #8F2D27 0%, #8F2D27 100%)
-
-//   &__center-background
-//     grid-row 1/2
-//     grid-column 2/3
-//     width $big-desktop-width
-//     height 100%
-//     background: linear-gradient(180deg, #8F2D27 0%, #8F2D27 100%)
-//     mask url('../../assets/recognition/top-cutout-mask.svg')
-//     mask-size cover auto
-
-//   &__right-background
-//     grid-row 1/2
-//     grid-column 3/4
-//     width 100%
-//     height 100%
-//     background: linear-gradient(180deg, #8F2D27 0%, #8F2D27 100%)
-
-
 .content-container
   height 1200px
   background: linear-gradient(180deg, #8F2D27 63.45%, #B63830 100%)
@@ -114,6 +79,7 @@
 
 .header-card-container
   // position relative
+  margin-left 40px
 
 .header-card
   position relative
@@ -152,15 +118,9 @@
 
   &__byline
     font-family: Open Sans;
-    font-style: normal;
     font-weight: normal;
     font-size: 23px;
     line-height: 167.69%;
-    /* or 39px */
-
-    // display: flex;
-    // align-items: center;
-    // text-align: center;
     letter-spacing: 0.055em;
 
     color: #FFFFFF;
@@ -169,6 +129,7 @@
     text-align center
     padding 0 20px
     margin-top 50px
+    margin-left 60px
 
     grid-row 2/3
 

@@ -29,22 +29,49 @@
 
         <nav class="header-nav">
           <ul class="header-nav__list">
-            <li class="header-nav__list-item header-nav__list-item--active">
+            <li 
+              :class="getListItemClass(1)"
+            >
               <anchor-router-link :to="{hash: '#link-target-top-pitch'}">
                 <router-link to="/">
-                  <a class="header-nav__link" href="">OM MAGNIFY</a>
+                  <a  
+                    @click="changeActivePageLink(1)"
+                    class="header-nav__link" 
+                    href=""
+                  >OM MAGNIFY</a>
                 </router-link>
               </anchor-router-link>
             </li>
-            <li class="header-nav__list-item">
-              <router-link to="/product">
-                <a class="header-nav__link" href="">Produkt</a>
-              </router-link>
+            
+            <li 
+              :class="getListItemClass(2)"
+              
+            >
+              <anchor-router-link :to="{hash: '#link-target-top-pitch'}">
+                <router-link to="/product">
+                  <a
+                    @click="changeActivePageLink(2)"
+                    class="header-nav__link"
+                    href=""
+                  >PRODUKT</a>
+                </router-link>
+              </anchor-router-link>
             </li>
-            <li class="header-nav__list-item">
-              <a class="header-nav__link" href="">Kontakt/Support</a>
+
+            <li 
+              :class="getListItemClass(3)"
+            >
+              <a 
+                @click="changeActivePageLink(3)"
+                class="header-nav__link" 
+                href=""
+              >Kontakt/Support</a>
             </li>
-            <li class="header-nav__list-item">
+
+            <li 
+              class="header-nav__list-item"
+              @click="changeActivePageLink(4)"
+            >
               <BaseButton
                   class="header-nav__button"
                   color="#fff"
@@ -80,7 +107,8 @@ export default {
   },
   data () {
     return {
-      smallHeader: false
+      smallHeader: false,
+      activePageLink: 1, 
 
     }
   },
@@ -94,7 +122,25 @@ export default {
         // console.log("deactive", window.scrollY)
         this.smallHeader = false
       }
+    },
+
+    getListItemClass: function(number) {
+      if (number == this.activePageLink) {
+        return [
+          "header-nav__list-item",
+          "header-nav__list-item--active"
+        ]
+      }else{
+        return [
+          "header-nav__list-item"
+        ]
+      }
+      
+    },
+    changeActivePageLink: function(number){
+      this.activePageLink = number
     }
+
   },
   directives: {
     test: {
