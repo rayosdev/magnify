@@ -10,9 +10,11 @@
 
 
         <div class="header__logo-container">
-          <a class="header__logo" clickable tag="a" target="_blank" href="https://www.google.com/">
-            <img src="~assets/header-logo.svg" alt="">
-          </a>
+          <anchor-router-link class="header__logo" :to="{hash: '#link-target-top-pitch'}">
+            <router-link to="/">
+              <img src="~assets/header-logo.svg" alt="">
+            </router-link>
+          </anchor-router-link>
 
           <div
             class="header__cards-decoration-container"
@@ -28,23 +30,29 @@
         <nav class="header-nav">
           <ul class="header-nav__list">
             <li class="header-nav__list-item header-nav__list-item--active">
-              <a class="header-nav__link" href="">OM MAGNIFY</a>
+              <anchor-router-link :to="{hash: '#link-target-top-pitch'}">
+                <router-link to="/">
+                  <a class="header-nav__link" href="">OM MAGNIFY</a>
+                </router-link>
+              </anchor-router-link>
             </li>
             <li class="header-nav__list-item">
-              <a class="header-nav__link" href="">Produkt</a>
+              <router-link to="/product">
+                <a class="header-nav__link" href="">Produkt</a>
+              </router-link>
             </li>
             <li class="header-nav__list-item">
               <a class="header-nav__link" href="">Kontakt/Support</a>
             </li>
             <li class="header-nav__list-item">
-              <base-button
-                class="header-nav__button"
-                color="#fff"
-                bgColor="#F84B40"
-                hoverColor="#8F2D27"
-                lipColor="#fff"
-                text="Logg inn"
-              />
+              <BaseButton
+                  class="header-nav__button"
+                  color="#fff"
+                  bgColor="#F84B40"
+                  hoverColor="#8F2D27"
+                  lipColor="#fff"
+                  text="Logg inn"
+                />
             </li>
           </ul>
         </nav>
@@ -62,11 +70,13 @@
 import { openURL } from 'quasar'
 import { constants } from 'crypto';
 import BaseButton from '../components/BaseButton'
+import AnchorRouterLink from 'vue-anchor-router-link'
 
 export default {
   name: 'MyLayout',
   components: {
-    'base-button':BaseButton
+    BaseButton,
+    AnchorRouterLink
   },
   data () {
     return {

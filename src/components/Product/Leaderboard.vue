@@ -91,7 +91,7 @@ import AnchorRouterLink from 'vue-anchor-router-link'
 
 
 export default {
-  name: "TopPitch",
+  name: "Leaderboard",
   components: {
     BaseButton,
     AnchorRouterLink

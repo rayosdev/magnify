@@ -2,7 +2,7 @@
   "name": "magnify",
   "version": "0.0.1",
   "description": "office performance and motivtion tool",
-  "productName": "Quasar App",
+  "productName": "Magnify",
   "cordovaId": "org.cordova.quasar.app",
   "author": "Rayos <rayos.dev@gmail.com>",
   "private": true,

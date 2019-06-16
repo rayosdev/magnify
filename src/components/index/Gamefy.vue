@@ -51,7 +51,7 @@
           
           <div 
             data-aos="fade-down"
-            data-aos-offset="450"
+            data-aos-offset="400"
             data-aos-anchor-placement="top-center" 
             class="gamefy__card"
             >
