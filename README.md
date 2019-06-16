@@ -1,18 +1,19 @@
 
-## made by Jared Anders Isaksen
+
 # Magnify
+## made by Jared Anders Isaksen
 
     npm install
 
-# to run dev server
+### to run dev server
 
     npx quasar dev
 
-# to build project run
+### to build project run
 
     quasar build
 
-#project will be in /dist folder
+### project will be in /dist folder
 
 
 > WIP
