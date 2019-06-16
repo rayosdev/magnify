@@ -37,7 +37,7 @@
 
           <img
             data-aos="fade-up"
-            data-aos-offset="100"
+            data-aos-offset="0"
             data-aos-anchor-placement="top-center" 
             class="gamefication-title-graphic" 
             src="~assets/recognition/gamefication-title-graphic.svg" a

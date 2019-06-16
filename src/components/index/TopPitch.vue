@@ -20,14 +20,14 @@
             </ol>
           </div>
           <anchor-router-link :to="{hash: '#link-target-summary'}">
-          <base-button
-            class="top-pitch__button"
-            color="#fff"
-            bgColor="#050505"
-            hoverColor="#818181"
-            lipColor="#F84B40"
-            text="SE HVORDAN"
-          />
+            <BaseButton
+              class="top-pitch__button"
+              color="#fff"
+              bgColor="#050505"
+              hoverColor="#818181"
+              lipColor="#F84B40"
+              text="SE HVORDAN"
+            />
           </anchor-router-link>
         </div>
       </div>

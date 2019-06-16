@@ -25,7 +25,7 @@
 
           <div 
             data-aos="fade-down"
-            data-aos-offset="100"
+            data-aos-offset="-50"
             data-aos-anchor-placement="top-center" 
             class="gamefy__card"
             >
@@ -38,7 +38,7 @@
           
           <div 
             data-aos="fade-down"
-            data-aos-offset="250"
+            data-aos-offset="100"
             data-aos-anchor-placement="top-center" 
             class="gamefy__card"
             >
@@ -51,7 +51,7 @@
           
           <div 
             data-aos="fade-down"
-            data-aos-offset="400"
+            data-aos-offset="200"
             data-aos-anchor-placement="top-center" 
             class="gamefy__card"
             >

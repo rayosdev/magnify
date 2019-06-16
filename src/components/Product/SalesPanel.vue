@@ -12,37 +12,42 @@
             data-aos-anchor-placement="top-center"
           >
             <div class="header-card">
-              <img class="header-card__image" src="~assets/recognition/image-man-with-headset.jpg" alt="">
+              <img class="header-card__image" src="~assets/sales-panel/salespanel-two-emplyes.jpg" alt="">
               <div class="header-card__title-background">
-                <h1 class="header-card__title-text">anErkjeNnelse</h1>
+                <h1 class="header-card__title-text">SelgerPanel</h1>
               </div>
             </div>
           </div>
-        <p class="header-card__byline">
-            Nøkkelen til økt motivasjon og arbeidsglede
-        </p>
-          
-          <img class="block-decoration" src="~assets/recognition/block-decoration.svg" alt="">
-
-          <div class="recognition-article">
-            <img class="recognition-article__magnaglass-image" src="~assets/recognition/achivement-magaglass.svg" alt="">
-            <h4 class="recognition-article__title">Hvorfor anerkjenne?</h4>
-            <p class="recognition-article__paragraph">
-              En fellesnevner for alle medarbeidere enten de ønsker det eller ikke er at anerkjennelse påvirker. Effekten av anerkjennelsen avhenger mye av medarbeidernes preferanser, utførelse av leder osv. 
+            <p class="header-card__byline">
+                Et verktøy som motiverer og effektiviserer medarbeidere på individnivå. 
             </p>
-            <p class="recognition-article__paragraph">
-              Ved bruk av MAGNIFY vil ledere bedre kunne skreddersy løsninger for hvordan å anerkjenne sine medarbeidere, samtidig som programmet sørger for at standard prestasjoner blir markert.
-            </p>
-          </div>
-
-          <img
-            data-aos="fade-up"
-            data-aos-offset="100"
-            data-aos-anchor-placement="top-center" 
-            class="gamefication-title-graphic" 
-            src="~assets/recognition/gamefication-title-graphic.svg" a
-            lt=""
+            
+            <div class="sales-panel-article__container">
+                <img class="sales-panel-article__panel-image" src="~assets/sales-panel/interactive prototype - sales-user homescreen.jpg" alt="">
+                <p class="sales-panel-article__paragraph">
+                    Selgerpanelet til MAGNIFY blir et verktøy som skal effektivisere medarbeiderne på individnivå. Ved hjelp av panelet kan du registrere salg, holde oversikt over personlige mål, invitere til konkurranser med andre medarbeidere og holde oversikt over salgstall.
+                </p>
+            </div>
+            
+            <div 
+                class="sales-panel-pitch__container"
+                data-aos="fade-up"
             >
+                <h3 class="sales-panel-pitch__header">
+                    Ta kontakt for å stille spørsmål eller spør oss om en gratis demo
+                </h3>
+                <BaseButton
+                    class="sales-panel-pitch__button"
+                    color="#8F2D27"
+                    bgColor="#fff"
+                    hoverColor="#FF948D"
+                    lipColor="#050505"
+                    text="SE HVORDAN"
+                />
+            </div>
+            
+
+                <img class="sales-panel__lower-cutout-up" src="~assets/sales-panel/cutout-up.svg" alt="">
         </div>
 
       </div>
@@ -50,23 +55,29 @@
 </template>
 
 <script>
-    export default {
-        name: "SalesPanel"
-        
+import BaseButton from "../BaseButton";
+
+export default {
+    name: "SalesPanel",
+
+    components: {
+        BaseButton
     }
+    
+}
 </script>
 
 <style lang="stylus" scoped>
 
 .content-container
-  height 1200px
+//   height 1200px
   background: linear-gradient(180deg, #8F2D27 63.45%, #B63830 100%)
 
   &__center
     margin 0 auto
     max-width $big-desktop-width
     display grid
-    grid-template-columns 1fr 1fr
+    grid-template-columns 1fr 2fr
 
 
 .header__cutout-down
@@ -79,6 +90,7 @@
 
 .header-card-container
   // position relative
+  margin-left 40px
 
 .header-card
   position relative
@@ -117,15 +129,9 @@
 
   &__byline
     font-family: Open Sans;
-    font-style: normal;
     font-weight: normal;
     font-size: 23px;
     line-height: 167.69%;
-    /* or 39px */
-
-    // display: flex;
-    // align-items: center;
-    // text-align: center;
     letter-spacing: 0.055em;
 
     color: #FFFFFF;
@@ -136,65 +142,83 @@
     margin-top 50px
 
     grid-row 2/3
+    margin-left 45px
 
-.block-decoration
-  justify-self center
-  margin-bottom -130px
-  margin-right 80px
-  grid-column 1/2
-  grid-row 3/5
+
   
 
-.recognition-article
-  grid-column 2/3
-  grid-row 2/5
-
-  justify-self center
-  
-  padding 0 120px
-  display grid
-  align-items center
-  justify-items center
-
-  &__magnaglass-image
-    width 150px
-    
-
-  &__title
-    font-family: Open Sans Bold
-    font-size: 15.905px;
-    line-height: 229.69%;
-    /* or 37px */
-
-    letter-spacing: 0.11em;
-
-    color: #FFFFFF;
-
-    margin 40px 0
 
 
-  &__paragraph
+.sales-panel-article
 
-    font-family: Open Sans;
-    font-size: 15.905px;
-    line-height: 229.69%;
-    /* or 37px */
-
-    text-align: center;
-    letter-spacing: 0.11em;
-
-    color: #FFFFFF;
-
-    margin-bottom 60px
-
-
-.gamefication-title-graphic
-    margin-top 40px
-    grid-column 1/3
-    grid-row 5/6
-
-    z-index 10
     justify-self center
+    
+    &__container
+        grid-column 1/3
+        grid-row 3/4
 
+        padding 0 60px
+        display grid
+        grid-gap 180px
+        // align-items center
+        // justify-items center
+        margin-top 100px
+
+    &__panel-image
+        grid-column 2/3
+        grid-row 1/2
+        align-slef center
+        justify-self center
+        box-shadow: 0px 3.1775px 3.1775px rgba(0, 0, 0, 0.25);
+
+
+    &__paragraph
+
+        font-family: Open Sans;
+        font-weight: normal;
+        font-size: 15.905px;
+        line-height: 229.69%;
+        letter-spacing: 0.11em;
+
+        color: #FFFFFF;
+
+        max-width 450px
+        justify-self center
+        padding 50px 0
+
+.sales-panel-pitch
+
+    &__container
+        grid-column 1/3
+        grid-row 4/5
+
+        max-width 320px        
+        display grid
+        justify-self center
+        margin-top 200px
+        margin-bottom 200px
+
+    &__header
+        justify-self center
+
+        font-family: Open Sans;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 167.69%; text-align: center;
+        letter-spacing: 0.055em;
+
+        color: #FFFFFF;
+
+    &__button 
+        margin-top 20px
+        max-width 167px
+        justify-self center
+
+.sales-panel__lower-cutout-up
+    grid-column 1/2
+    grid-row 5/6
+    justify-self center
+    position relative
+    bottom -10px
 
 </style>
