@@ -6,7 +6,7 @@
     <Focus />
     <Summary />
     <Footer />
-
+    
     
 
 
@@ -30,7 +30,9 @@ export default {
     Gamefy,
     Focus,
     Summary,
-    Footer
+    Footer,
+
+ 
 
   }
 }

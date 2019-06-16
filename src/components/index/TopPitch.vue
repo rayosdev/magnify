@@ -14,11 +14,11 @@
             >
             <ol class="top-pitch__order-list">
               <li class="top-pitch__list-item">1. Mer Motivasjon</li>
-              <li class="top-pitch__list-item">2. høyere fokus</li>
+              <li class="top-pitch__list-item">2. Bedre fokus</li>
               <li class="top-pitch__list-item">3. Økt prodktivitet</li>
             </ol>
           </div>
-          <a class="top-pitch__link-target" href="#link-target-summary">
+          <anchor-router-link :to="{hash: '#link-target-summary'}">
           <base-button
             class="top-pitch__button"
             color="#fff"
@@ -27,7 +27,7 @@
             lipColor="#F84B40"
             text="SE HVORDAN"
           />
-          </a>
+          </anchor-router-link>
         </div>
       </div>
 
@@ -86,11 +86,14 @@
 
 <script>
 import BaseButton from "../BaseButton";
+import AnchorRouterLink from 'vue-anchor-router-link'
+
 
 export default {
   name: "TopPitch",
   components: {
-    BaseButton
+    BaseButton,
+    AnchorRouterLink
   }
 };
 </script>

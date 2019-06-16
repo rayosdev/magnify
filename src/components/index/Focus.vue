@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+      <div id="link-target-focus" style="position:relative; top: -150px"></div>
       <div class="container__center">
 
         <div
@@ -16,7 +17,7 @@
           </div>
         </div>
         <p class="header-card__byline">
-            For fremgang må du se hvor du har vært og hvor du skal hen
+            Hardt arbeid uten fokus gir minimalt med resultater. 
         </p>
 
         <div class="focus-article focus-article--article1">
@@ -25,17 +26,17 @@
           </h2>
           <img class="focus-article__image" src="~assets/focus/reminder-finger.svg" alt="">
           <p class="focus-article__paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            Gjennom MAGNIFY sitt enkle system vil brukeren få oversikt over sine personlige og team-mål. Ettersom studier har vist at et mål krever fokus fra brukeren, gir systemet en rask påminnelse av brukerens mål og progresjon ved oppstart. 
           </p>
         </div>
 
         <div class="focus-article focus-article--article2">
           <h2 class="focus-article__header">
-            Progresjon over tid
+            Utvikling
           </h2>
           <img class="focus-article__image" src="~assets/focus/progression-graph.svg" alt="">
           <p class="focus-article__paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            Positiv utvikling i omsetningen av bedriften har ofte korelasjon med positiv utvikling av medarbeidere. Vi gjør det til et poeng å fremstille dataen til brukeren slik at man selv kan få innsikt i hvor det er høyest potesniale for vektst.  
           </p>
         </div>
 
@@ -103,10 +104,10 @@
 
 
   &__byline
-    font-family: Open Sans Semi Bold;
+    font-family: Open Sans;
     font-size: 23px;
     line-height: 167.69%;
-    letter-spacing: 0.055em;
+    letter-spacing: 0.1em;
 
     color: #333333;
 
@@ -114,7 +115,7 @@
     text-align center
     justify-self center
     padding 0 20px
-    margin-top 10px
+    margin-top -20px
 
     grid-row 2/3
     grid-column 2/3
@@ -135,7 +136,7 @@
     font-size: 33.7584px;
     line-height: 167.69%;
     text-align: center;
-    letter-spacing: 0.055em;
+    letter-spacing: 0.05em;
 
     color: #8F2D27;
 
@@ -167,7 +168,7 @@
     grid-column 2/3
 
 .block-decorations
-  margin-top -250px
+  margin-top -350px
   grid-row 4/5
   grid-column 1/2
   align-self center

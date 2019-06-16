@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <div id="#link-target-recognition"></div>
+      <div id="link-target-recognition" style="position:relative; top: -150px"></div>
       <div class="content-container">
         <div class="content-container__center">
           <img class="header__cutout-down" src="~assets/recognition/cutout-down-recognition.svg" alt="">
@@ -26,12 +26,12 @@
 
           <div class="recognition-article">
             <img class="recognition-article__magnaglass-image" src="~assets/recognition/achivement-magaglass.svg" alt="">
-            <h4 class="recognition-article__title">Hva er MAGNIFY?</h4>
+            <h4 class="recognition-article__title">Hvorfor anerkjenne?</h4>
             <p class="recognition-article__paragraph">
-                MAGNIFY er et salgsverktøy som er laget for å øke motivasjon, effektivitet og arbeidsglede i bedrifter som arbeider med salg og kundeservice.
+              En fellesnevner for alle medarbeidere enten de ønsker det eller ikke er at anerkjennelse påvirker. Effekten av anerkjennelsen avhenger mye av medarbeidernes preferanser, utførelse av leder osv. 
             </p>
             <p class="recognition-article__paragraph">
-                Ved bruk av salgsverktøyet kan salgsteamet få full oversikt over ledertabeller. Det er også enkelt å sette felles eller personlige mål, arrangere konkurranser, måle fremgang og anerkjenne milepæler etter egne preferanser. 
+              Ved bruk av MAGNIFY vil ledere bedre kunne skreddersy løsninger for hvordan å anerkjenne sine medarbeidere, samtidig som programmet sørger for at standard prestasjoner blir markert.
             </p>
           </div>
 
@@ -43,7 +43,6 @@
             src="~assets/recognition/gamefication-title-graphic.svg" a
             lt=""
             >
-
         </div>
 
       </div>
@@ -225,7 +224,7 @@
 
 
 .gamefication-title-graphic
-    margin-top 80px
+    margin-top 40px
     grid-column 1/3
     grid-row 5/6
 

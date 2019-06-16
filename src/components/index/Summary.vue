@@ -13,9 +13,10 @@
         >
 
         <div class="top-article__container">
-          <h1 class="top-article__header">Magnify</h1>
+          <h1 class="top-article__header">Hva er MAGNIFY?</h1>
           <p class="top-article__paragraph">
-            Gir teamet ditt anarkjendelse og fokus igjennom verktøy som gamefikasjon
+            MAGNIFY er et salgsverktøy som er laget for å øke motivasjon, effektivitet og arbeidsglede i bedrifter som arbeider med salg og kundeservice.
+            Ved bruk av salgsverktøyet kan salgsteamet få full oversikt over ledertabeller. Det er også enkelt å sette felles eller personlige mål, arrangere konkurranser, måle fremgang og anerkjenne milepæler etter egne preferanser.
           </p>
         </div>
 
@@ -27,8 +28,11 @@
               anarkjenelse
             </h2>
             <p class="summary-card__paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              <a class="summary-card__link" href="link-target-recognition">Se mer</a>
+              Ved bruk av MAGNIFY vil ledere bedre kunne skreddersy løsninger for hvordan å anerkjenne sine medarbeidere, samtidig som programmet sørger for at standard prestasjoner blir markert.
+              <anchor-router-link 
+                class="summary-card__link"
+                :to="{hash: '#link-target-recognition'}"
+              >Se mer</anchor-router-link>
             </p>
           </div>
           
@@ -38,8 +42,11 @@
               Gamefikasjon
             </h2>
             <p class="summary-card__paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              <a class="summary-card__link" href="link-target-gamefy">Se mer</a>
+              Enten vi vil det eller ei, er vi daglig omringet av gamification. Vi fostår at gamification, uansett hvilken arena, har en positiv effekt for forbrukeren i henhold til økt insentiv til å prestere bedre. 
+              <anchor-router-link 
+                class="summary-card__link"
+                :to="{hash: '#link-target-gamefy'}"
+              >Se mer</anchor-router-link>
             </p>
           </div>
           
@@ -49,8 +56,11 @@
               Fokus
             </h2>
             <p class="summary-card__paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              <a class="summary-card__link" href="link-target-focus">Se mer</a>
+              Gjennom MAGNIFY sitt enkle system vil brukeren få oversikt over sine personlige og team-mål. Ettersom studier har vist at et mål krever fokus fra brukeren, gir systemet en rask påminnelse av brukerens mål og progresjon ved oppstart. 
+              <anchor-router-link 
+                class="summary-card__link"
+                :to="{hash: '#link-target-focus'}"
+              >Se mer</anchor-router-link>
             </p>
           </div>
 
@@ -99,14 +109,16 @@
 
 <script>
 import BaseButton from "../../components/BaseButton"
+import AnchorRouterLink from 'vue-anchor-router-link'
 
-    export default {
-        name: "Summary",
+export default {
+    name: "Summary",
 
-        components: {
-            BaseButton
-        }
+    components: {
+        BaseButton,
+        AnchorRouterLink
     }
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -138,7 +150,7 @@ import BaseButton from "../../components/BaseButton"
   justify-self center
   position relative
   top -65px
-  left -60px
+  left 20px
 
 .arrow
   grid-row 1/2
@@ -146,7 +158,7 @@ import BaseButton from "../../components/BaseButton"
   justify-self center
   position relative
   top -15px
-  left -200px
+  left -100px
 
 
 .top-article
@@ -171,7 +183,7 @@ import BaseButton from "../../components/BaseButton"
 
   &__paragraph
     font-family: Open Sans;
-    font-size: 23px;
+    font-size: 20px;
     line-height: 167.69%;
     text-align: center;
     letter-spacing: 0.055em;
@@ -179,7 +191,7 @@ import BaseButton from "../../components/BaseButton"
     color: #FFFFFF;
 
     margin-top 70px
-    max-width 460px
+    max-width 860px
 
 .summary-card__container
   grid-column 1/4
