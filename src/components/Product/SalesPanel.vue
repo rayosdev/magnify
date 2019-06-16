@@ -41,7 +41,7 @@
                     color="#8F2D27"
                     bgColor="#fff"
                     hoverColor="#FF948D"
-                    lipColor="#050505"
+                    lipColor="#8F2D27"
                     text="SE HVORDAN"
                 />
             </div>
