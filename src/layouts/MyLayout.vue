@@ -61,25 +61,29 @@
             <li 
               :class="getListItemClass(3)"
             >
-              <a 
-                @click="changeActivePageLink(3)"
-                class="header-nav__link" 
-                href=""
-              >Kontakt/Support</a>
+              <router-link to="/contact-support">
+                <a 
+                  @click="changeActivePageLink(3)"
+                  class="header-nav__link" 
+                  href=""
+                >Kontakt/Support</a>
+              </router-link>
             </li>
 
             <li 
               class="header-nav__list-item"
               @click="changeActivePageLink(4)"
             >
-              <BaseButton
-                  class="header-nav__button"
-                  color="#fff"
-                  bgColor="#F84B40"
-                  hoverColor="#8F2D27"
-                  lipColor="#fff"
-                  text="Logg inn"
-                />
+              <router-link to="/login">
+                <BaseButton
+                    class="header-nav__button"
+                    color="#fff"
+                    bgColor="#F84B40"
+                    hoverColor="#8F2D27"
+                    lipColor="#fff"
+                    text="Logg inn"
+                  />
+              </router-link>
             </li>
           </ul>
         </nav>

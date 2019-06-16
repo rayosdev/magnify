@@ -19,6 +19,7 @@ import Recognition from "../components/index/Recognition"
 import Gamefy from "../components/index/Gamefy"
 import Focus from "../components/index/Focus"
 import Summary from "../components/index/Summary"
+
 import Footer from "../components/Footer"
 
 
@@ -30,6 +31,7 @@ export default {
     Gamefy,
     Focus,
     Summary,
+    
     Footer,
 
  
