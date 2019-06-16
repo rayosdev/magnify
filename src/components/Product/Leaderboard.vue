@@ -3,84 +3,47 @@
 
     <!-- <img alt="Quasar logo" src="~assets/quasar-logo-full.svg"> -->
     <div class="container">
-      <div id="link-target-top-pitch" style="position:absolute; top: -100px"></div>
-      <div class="top-pitch-container">
-        <div class="top-pitch">
-          <h1 class="top-pitch__header-text">magnify gir ditt team</h1>
-          <div class="top-pitch__arrow-and-list-container">
-            <img
-              class="top-pitch__arrow"
-              src="~assets/about/home-magnify-arrow-top-section.svg"
-              alt
-            >
-            <ol class="top-pitch__order-list">
-              <li class="top-pitch__list-item">1. Mer Motivasjon</li>
-              <li class="top-pitch__list-item">2. Bedre fokus</li>
-              <li class="top-pitch__list-item">3. Økt prodktivitet</li>
-            </ol>
-          </div>
-          <anchor-router-link :to="{hash: '#link-target-summary'}">
-          <base-button
-            class="top-pitch__button"
-            color="#fff"
-            bgColor="#050505"
-            hoverColor="#818181"
-            lipColor="#F84B40"
-            text="SE HVORDAN"
-          />
-          </anchor-router-link>
-        </div>
-      </div>
-
+      <div id="link-target-leaderboard" style="position:absolute; top: -100px"></div>
       <div class="leaderboard-container">
-        <div class="leaderboard">
-          <img
-            data-aos="fade-up"
-            data-aos-delay="300"
-            class="leaderboard__ground-shadow"
-            src="~assets/about/leaderboard-ground-shadow.svg"
-            alt
-          >
-          <img
-            data-aos="fade-up"
-            data-aos-delay="300"
-            class="leaderboard__background"
-            src="~assets/about/leaderborad -background.png"
-            alt
-          >
-          <div class="leaderboard__card-container">
-            <img
-              data-aos="fade-down"
-              data-aos-delay="600"
-              class="leaderboard__card"
-              src="~assets/about/leaderboard-card.png"
-              alt
-            >
-            <img
-              data-aos="fade-up"
-              data-aos-delay="600"
-              class="leaderboard__card-shadow"
-              src="~assets/about/leaderboard-card-shadow.svg"
-              alt
-            >
-          </div>
-          <div class="leaderboard__card-plain-container">
-            <img
-              data-aos="fade-up"
-              data-aos-delay="850"
-              class="leaderboard__card-plain-shadow"
-              src="~assets/about/leaderboard-card-shadow.svg"
-              alt
-            >
-            <img
-              data-aos="fade-up"
-              data-aos-delay="850"
-              class="leaderboard__card-plain"
-              src="~assets/about/leadboard-card placeholders.png"
-              alt
-            >
-          </div>
+        
+        <div class="product-intro__container">
+            <h1 class="product-intro__header-text">magnify sOM pLATFORM</h1>
+            <p class="product-intro__paragraph">
+                Vårt mål er at MAGNIFY skal kunne bidra til mer motivasjon, bedre fokus og 
+                økt produktivitet på din arbeidsplass uten at det trenger å være dyrt! 
+            </p>
+            <p class="product-intro__paragraph">
+                Produktet består av to hoveddeler: Et “Leaderboard” og selgerpanelet. 
+            </p>
         </div>
+        <div class="leaderboard-explained__container">
+            <h2 class="leaderboard-explained__header">
+                Leaderboard
+            </h2>
+            <p class="leaderboard-explained__paragraph">
+                Se for deg at du har jobbet et par timer og dermed er det på tide med en kaffepause. Du går opp til kaffemaskinen, ser deg over skulderen på TV-skjermen som viser at Espen nettopp har fått en ny salgsrekord. 
+            </p>
+        </div>
+        <div class="leaderboard-demo__container">
+            <img class="leaderboard-demo__image" src="~assets/leaderboard/leaderboard-demo.jpg" alt="">
+            <p class="leaderboard-demo__byline">
+                Hovedmålet med “leaderboardet” er at medarbeidere skal enkelt kunne få oversikt over de råeste medarbeiderne og få oppdateringer på sekundet når noen oppnår en viktig milepæl. 
+            </p>
+
+            <anchor-router-link 
+                class="leaderboard-demo__action-button"
+                :to="{hash: '#link-target-summary'}"
+            >
+                <base-button
+                    color="#fff"
+                    bgColor="#050505"
+                    hoverColor="#818181"
+                    lipColor="#F84B40"
+                    text="FÅ EN GRATIS DEMO"
+                />
+            </anchor-router-link>
+        </div>
+      
       </div>
     </div>
 </template>
@@ -101,157 +64,124 @@ export default {
 
 <style lang="stylus" scoped>
 
-  .container
+.container
     max-width $big-desktop-width
     margin 0 auto
 
+
+.leaderboard-container
     display grid
-    grid-template-columns 3fr 1fr
+    grid-template-columns 1fr 1fr
+    // border solid 4px #00f
+    grid-gap 20px
+    margin 0 50px
 
+.product-intro
 
-  .top-pitch-container
-    grid-row 1/2
+    &__container
+        grid-column 1/3
 
-  .top-pitch
-    margin-top 150px
-    // background #dfd
-    display grid
-    justify-items center
-    align-content center
-    
+        margin 150px 0
+        // background #dfd
+        display grid
+        justify-items center
+        align-content center
+        
+        text-align: center;
+        color: #050505;
 
 
     &__header-text
-      font-family: Montserrat Bold;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 35.1808px;
-      line-height: 146.91%;
-      /* identical to box height, or 52px */
+        font-family: Montserrat Bold;
+        font-weight: bold;
+        font-size: 35.1808px;
+        line-height: 146.91%;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
 
-      text-align: center;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+        margin-bottom 5px
+        
+    &__paragraph
+        font-family: Open Sans;
+        font-weight: normal;
+        font-size: 23px;
+        line-height: 167.69%;
+        letter-spacing: 0.055em;
+        
+        max-width 612px
+        margin-top 30px
 
-      color: #050505;
-      margin-bottom 5px
+.leaderboard-explained
 
-    &__arrow-and-list-container
-      position relative
+    &__container
+        grid-row 2/3
+        grid-column 1/2
+        display grid
+        grid-template-rows minmax(80px,120px) 4fr
+        justify-self start
+
+
+
+    &__header
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 33.7584px;
+        text-align: center;
+        line-height: 167.69%;
+        letter-spacing: 0.055em;
+
+        color: #8F2D27;
+        justify-self center
+        margin-right 80px
+        max-height 50px
     
-    &__arrow
-      position absolute
-      top -10px
-      left 100%
+    &__paragraph
+        font-family: Open Sans;
+        font-weight: normal;
+        font-size: 15.905px;
+        line-height: 229.69%;
+        letter-spacing: 0.11em;
+
+        color: #050505;
+
+        max-width 450px
+        justify-self center
+        align-self start
+
+.leaderboard-demo
     
-    &__order-list
-      padding-left 0
+    &__container
+        justify-self end
+        grid-row 2/3
+        grid-column 2/3
 
-    &__list-item
-      font-family: Montserrat Medium
-      font-size: 27.8134px;
-      line-height: 146.91%;
+        display grid
 
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+    &__image
+        justify-self end
+        width 100%
 
-      color: #F84B40;
+    &__byline
+        justify-self end
 
-    &__button
-      margin-top 30px
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15.905px;
+        line-height: 229.69%;
+        /* or 37px */
 
+        letter-spacing: 0.11em;
 
+        color: #050505;
 
-
-  .leaderboard-container
-  
-    -webkit-user-drag none
-    user-select none
-    grid-column 2/3
-    
-    perspective 2000px
-
-
-  .leaderboard
-    max-width 500px
-    display grid
-    justify-items center
-    align-items center
-    transform rotateY(-60deg) rotateZ(15deg) rotateX(-8deg) translateY(100px) translateX(-240px)
-
-    &__card-container
-      grid-row 1/2
-      grid-column 1/2
-
-      display grid
-
-      transform translateY(-150px) 
-      perspective 400px
-    
-    &__card
-      user-select: none
-      -webkit-user-drag none 
-      position relative
-      left -100px
-      top 40px
-      grid-row 1/2
-      grid-column 1/2
-
-      width 400px
-      transform translateX(-60px) translateZ(100px) translateY(40px)
-
-    &__card-shadow
-      user-select: none
-      -webkit-user-drag none 
-      z-index -1
-      grid-row 1/2
-      grid-column 1/2
-      
-
-    &__card-plain-container
-      grid-row 1/2
-      grid-column 1/2
-
-      display grid
-
-      transform translateY(-10px)
-      perspective 600px
-      
-    &__card-plain
-      user-select: none
-      -webkit-user-drag none 
-      grid-row 1/2
-      grid-column 1/2
-      position relative
-      left -50px
-      top 10px
-      width 343px
-      transform translateX(-20px) translateZ(100px) translateY(40px)
-    
-    &__card-plain-shadow
-      user-select: none
-      -webkit-user-drag none 
-      grid-row 1/2
-      grid-column 1/2
+        max-width 600px
 
 
-    &__background
-      user-select: none
-      -webkit-user-drag none 
-      grid-row 1/2
-      grid-column 1/2
-
-      width  444px
-
-    &__ground-shadow
-      user-select: none
-      -webkit-user-drag none 
-      position relative
-      top -130px
-      transform translateY(-130px)
-      opacity 0
-      z-index -1
-
+    &__action-button
+        justify-self center
+        margin-top 130px
 
 
 </style>
