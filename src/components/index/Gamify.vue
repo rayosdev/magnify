@@ -1,37 +1,37 @@
 <template>
-    <div class="gamefy-container">
-      <div id="link-target-gamefy" style="position:relative; top: -310px"></div>
-      <div class="gamefy-section__top-cutout top-cutout">
+    <div class="gamify-container">
+      <div id="link-target-gamify" style="position:relative; top: -310px"></div>
+      <div class="gamify-section__top-cutout top-cutout">
         <div class="top-cutout__left-background"></div>
         <div class="top-cutout__center-background"></div>
         <div class="top-cutout__right-background"></div>
       </div>
 
-      <div class="gamefy-container__center gamefy">
-        <img class="gamefy__cutout-up" src="~assets/gamefy/cutout-up-gamefication.svg" alt="">
+      <div class="gamify-container__center gamify">
+        <img class="gamify__cutout-up" src="~assets/gamify/cutout-up-gamefication.svg" alt="">
 
-        <img class="gamefy__arrow-down" src="~assets/gamefy/arrow-down.svg" alt="">
+        <img class="gamify__arrow-down" src="~assets/gamify/arrow-down.svg" alt="">
         
-        <div class="gamefy__head-container">
-          <h3 class="gamefy__head-header">
+        <div class="gamify__head-container">
+          <h3 class="gamify__head-header">
             Hvorfor bruker vi gamification? 
           </h3>
-          <p class="gamefy__head-paragraph">
+          <p class="gamify__head-paragraph">
             Enten vi vil det eller ei, er vi daglig omringet av gamification. Vi fostår at gamification, uansett hvilken arena, har en positiv effekt for forbrukeren i henhold til økt insentiv til å prestere bedre. 
           </p>
         </div>
 
-        <div class="gamefy__card-container">
+        <div class="gamify__card-container">
 
           <div 
             data-aos="fade-down"
             data-aos-offset="-50"
             data-aos-anchor-placement="top-center" 
-            class="gamefy__card"
+            class="gamify__card"
             >
-            <h2 class="gamefy__card-header">Progresjon</h2>
-            <img class="gamefy__card-image" src="~assets/gamefy/progress-bar.svg" alt="">
-            <p class="gamefy__card-paragraph">
+            <h2 class="gamify__card-header">Progresjon</h2>
+            <img class="gamify__card-image" src="~assets/gamify/progress-bar.svg" alt="">
+            <p class="gamify__card-paragraph">
               Et kjent sitat sier “When performance is measured, performance improves”. Vi er interessert i å effektivisere medarbeiderne og har derfor gjort det enkelt å holde oversikt over frengangen, enten det er på -individ, -team eller bedriftsnivå. 
             </p>
           </div>
@@ -40,11 +40,11 @@
             data-aos="fade-down"
             data-aos-offset="100"
             data-aos-anchor-placement="top-center" 
-            class="gamefy__card"
+            class="gamify__card"
             >
-            <h2 class="gamefy__card-header">Konkurranser</h2>
-            <img class="gamefy__card-image" src="~assets/gamefy/competition-cars.svg" alt="">
-            <p class="gamefy__card-paragraph">
+            <h2 class="gamify__card-header">Konkurranser</h2>
+            <img class="gamify__card-image" src="~assets/gamify/competition-cars.svg" alt="">
+            <p class="gamify__card-paragraph">
               Våre kjerneverdier handler om å skape mer motivasjon, bedre fokus og økt prodoktivitet. Med disse verdiene i tankene har vi skreddersydd konkurransemulighetene i MAGNIFY til å komplimentere nettopp disse verdiene, og styrer vekk fra konkurranseformer som ødelegger for disse verdiene. 
             </p>
           </div>
@@ -53,18 +53,18 @@
             data-aos="fade-down"
             data-aos-offset="200"
             data-aos-anchor-placement="top-center" 
-            class="gamefy__card"
+            class="gamify__card"
             >
-            <h2 class="gamefy__card-header">Markeringer</h2>
-            <img class="gamefy__card-image" src="~assets/gamefy/medal-runner.svg" alt="">
-            <p class="gamefy__card-paragraph">
+            <h2 class="gamify__card-header">Markeringer</h2>
+            <img class="gamify__card-image" src="~assets/gamify/medal-runner.svg" alt="">
+            <p class="gamify__card-paragraph">
               Vi har et ekslusivt sett med markeringen som gir medarbeiderne tydlige milepæler å jobbe etter. “EarlyBird-markeringen” er et eksempel hvor medarbeideren blir belønnet for å ha fått inn et salg før et klokkeslett satt av teamleder.
             </p>
           </div>
         
         </div>
       
-        <img class="gamefy__cutout-down" src="~assets/gamefy/cutout-down.svg" alt="">
+        <img class="gamify__cutout-down" src="~assets/gamify/cutout-down.svg" alt="">
 
       </div>
     </div>
@@ -72,7 +72,7 @@
 
 <script>
     export default {
-        name: "Gamefy"
+        name: "Gamify"
     }
 </script>
 
@@ -97,7 +97,7 @@
     width $big-desktop-width
     height 100%
     background: linear-gradient(180deg, #B63830 0%, #C23B33 100%);
-    // mask url('../../assets/gamefy/cutout-mask-down.svg')
+    // mask url('../../assets/gamify/cutout-mask-down.svg')
     // mask-size cover auto
 
   &__right-background
@@ -107,7 +107,7 @@
     height 100%
     background: linear-gradient(180deg, #B63830 0%, #C23B33 100%);
 
-.gamefy-container
+.gamify-container
   background: #333333;
 
   &__center
@@ -118,7 +118,7 @@
     grid-template-columns 1fr 1fr
     height 100%
 
-.gamefy
+.gamify
 
   &__cutout-up
     // border solid 3px #00f

@@ -2,7 +2,7 @@
   <q-page>
     <TopPitch />
     <Recognition />
-    <Gamefy />
+    <Gamify />
     <Focus />
     <Summary />
     <Footer />
@@ -16,7 +16,7 @@
 <script>
 import TopPitch from "../components/index/TopPitch"
 import Recognition from "../components/index/Recognition"
-import Gamefy from "../components/index/Gamefy"
+import Gamify from "../components/index/Gamify"
 import Focus from "../components/index/Focus"
 import Summary from "../components/index/Summary"
 
@@ -28,13 +28,13 @@ export default {
   components: {
     TopPitch,
     Recognition,
-    Gamefy,
+    Gamify,
     Focus,
     Summary,
     
     Footer,
 
- 
+
 
   }
 }

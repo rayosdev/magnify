@@ -25,7 +25,7 @@
           <div class="summary-card summary-card--card1">
             <img class="summary-card__icon" src="~assets/summary/achivement-magaglass-icon.svg" alt="">
             <h2 class="summary-card__header">
-              anarkjenelse
+              Anerkjennelse
             </h2>
             <p class="summary-card__paragraph">
               Ved bruk av MAGNIFY vil ledere bedre kunne skreddersy løsninger for hvordan å anerkjenne sine medarbeidere, samtidig som programmet sørger for at standard prestasjoner blir markert.
@@ -39,7 +39,7 @@
           <div class="summary-card summary-card--card2">
             <img class="summary-card__icon" src="~assets/summary/gamefication-icon.svg" alt="">
             <h2 class="summary-card__header">
-              Gamefikasjon
+              Gamification
             </h2>
             <p class="summary-card__paragraph">
               Enten vi vil det eller ei, er vi daglig omringet av gamification. Vi fostår at gamification, uansett hvilken arena, har en positiv effekt for forbrukeren i henhold til økt insentiv til å prestere bedre. 
@@ -76,15 +76,17 @@
             >
           <div class="final-pitch__content-container">
             <p class="final-pitch__product-paragraph">
-              Se ditaljer om produktet 
+              Se detaljer om produktet 
               <a 
                 class="final-pitch__product-paragraph-link" 
                 href="#link-target-"
               >her</a>
             </p>
             <p class="final-pitch__contact-paragraph">
-              For å sett opp en avtale eller få mer dikrekte info 
+              Ta kontakt for mer informasjon eller for å sette opp en uforpliktende samtale med en av våre spesialister
             </p>
+
+            <router-link to="/contact-support">
             <BaseButton
               class="final-pitch__contact-button" 
               color="#fff"
@@ -93,6 +95,8 @@
               lipColor="#F84B40"
               text="Ta Kontakt"
             />
+          </router-link>
+
           </div>
           <img
             data-aos="fade-up-left"
