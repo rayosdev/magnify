@@ -25,7 +25,7 @@
                                 v-model="username" 
                                 filled 
                                 type="text" 
-                                hint="Skriv in passord *" 
+                                hint="Skriv in navn *" 
                             />
 
                             <q-input
@@ -35,7 +35,7 @@
                                 v-model="password" 
                                 filled 
                                 type="password" 
-                                hint="Skriv in navnet *" 
+                                hint="Skriv in passord *" 
                             />
                             
                             

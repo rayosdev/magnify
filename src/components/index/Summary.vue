@@ -85,14 +85,16 @@
             <p class="final-pitch__contact-paragraph">
               For å sett opp en avtale eller få mer dikrekte info 
             </p>
-            <BaseButton
-              class="final-pitch__contact-button" 
-              color="#fff"
-              bgColor="#050505"
-              hoverColor="#818181"
-              lipColor="#F84B40"
-              text="Ta Kontakt"
-            />
+            <router-link to="/contact-support">
+              <BaseButton
+                class="final-pitch__contact-button" 
+                color="#fff"
+                bgColor="#050505"
+                hoverColor="#818181"
+                lipColor="#F84B40"
+                text="Ta Kontakt"
+              />
+            </router-link>
           </div>
           <img
             data-aos="fade-up-left"

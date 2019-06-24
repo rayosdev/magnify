@@ -36,14 +36,19 @@
                 <h3 class="sales-panel-pitch__header">
                     Ta kontakt for å stille spørsmål eller spør oss om en gratis demo
                 </h3>
-                <BaseButton
-                    class="sales-panel-pitch__button"
-                    color="#8F2D27"
-                    bgColor="#fff"
-                    hoverColor="#FF948D"
-                    lipColor="#8F2D27"
-                    text="SE HVORDAN"
-                />
+
+                <router-link 
+                  to="/contact-support"    
+                  class="sales-panel-pitch__button"
+                >
+                  <BaseButton
+                      color="#8F2D27"
+                      bgColor="#fff"
+                      hoverColor="#FF948D"
+                      lipColor="#8F2D27"
+                      text="KONTAKT HER"
+                  />
+                </router-link>
             </div>
             
 

@@ -40,14 +40,20 @@
             <p class="final-pitch__contact-paragraph">
               I et uforpliktende møte med en av våre spesialister kan vi se nærmere på hvordan dette kan integreres på deres arbeidsplass. 
             </p>
-            <BaseButton
+
+            <router-link 
+              to="/contact-support"    
               class="final-pitch__contact-button" 
-              color="#8F2D27"
-              bgColor="#fff"
-              hoverColor="#FF948D"
-              lipColor="#050505"
-              text="Ta Kontakt"
-            />
+            >
+              <BaseButton
+                class="final-pitch__contact-button" 
+                color="#8F2D27"
+                bgColor="#fff"
+                hoverColor="#FF948D"
+                lipColor="#050505"
+                text="Ta Kontakt"
+              />
+            </router-link>
           </div>
           <img
             data-aos="fade-up-left"

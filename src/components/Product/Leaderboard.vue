@@ -30,18 +30,18 @@
                 Hovedmålet med “leaderboardet” er at medarbeidere skal enkelt kunne få oversikt over de råeste medarbeiderne og få oppdateringer på sekundet når noen oppnår en viktig milepæl. 
             </p>
 
-            <anchor-router-link 
-                class="leaderboard-demo__action-button"
-                :to="{hash: '#link-target-summary'}"
+            <router-link 
+                to="/contact-support"
+                class="leaderboard-demo__action-button"    
             >
                 <base-button
                     color="#fff"
                     bgColor="#050505"
                     hoverColor="#818181"
                     lipColor="#F84B40"
-                    text="FÅ EN GRATIS DEMO"
+                    text="KONTAKT FOR EN GRATIS DEMO"
                 />
-            </anchor-router-link>
+            </router-link>
         </div>
       
       </div>
@@ -183,6 +183,7 @@ export default {
     &__action-button
         justify-self center
         margin-top 130px
+        margin-right 200px
 
 
 </style>
