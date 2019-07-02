@@ -67,6 +67,9 @@
 import Footer from "../components/Footer"
 import BaseButton from "../components/BaseButton"
 
+import store from "../store"
+
+
 export default {
     name: "Login",
     components: {
@@ -103,6 +106,7 @@ export default {
     margin 0 auto
     max-width $big-desktop-width
     display grid
+    margin-top -100px
     color: #FFFFFF;
 
 .login-info

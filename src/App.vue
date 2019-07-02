@@ -8,6 +8,10 @@
 import AOS from "aos";
 import "aos/dist/aos.css"
 
+// import firebase from 'firebase/app';
+// import 'firebase/auth';
+// import 'firebase/database';
+
 
 export default {
   name: 'App',
@@ -15,6 +19,7 @@ export default {
     AOS.init()
   }
 }
+
 
 </script>
 
