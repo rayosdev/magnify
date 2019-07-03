@@ -8,10 +8,14 @@ const routes = [
       { path: '/product', component: () => import('pages/Product.vue') },
       { path: '/contact-support', component: () => import('pages/ContactSupport.vue') },
       { path: '/login', component: () => import('pages/Login.vue') },
-      { path: '/app/new-admin-user', component: () => import('app-pages/NewAdminUser.vue') }
+      { path: '/app/new-admin-user', component: () => import('../app-pages/NewAdminUser.vue') },
+      
+      
+      { path: '/app/admin-home', component: () => import('../app-pages/AdminHome.vue') },
     ]
   }
 ]
+
 
 // Always leave this as last one
 if (process.env.MODE !== 'ssr') {

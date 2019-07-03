@@ -22,7 +22,7 @@
                                 class="login__username"
                                 dark
                                 outlined 
-                                v-model="username" 
+                                v-model="email" 
                                 filled 
                                 type="text" 
                                 hint="Skriv in navn *" 
@@ -57,8 +57,7 @@
 
             </div>
         </div>
-
-
+        
         <Footer />
     </q-page>
 </template>
@@ -68,6 +67,7 @@ import Footer from "../components/Footer"
 import BaseButton from "../components/BaseButton"
 
 import store from "../store"
+import firebase from 'firebase'
 
 
 export default {
@@ -79,15 +79,79 @@ export default {
     },
     data() {
         return {
-            username: "",
+            email: "",
             password: "",
         }
     },
     methods: {
         loginAttempt: function(e) {
             e.preventDefault()
-            console.log("Logginn attempt")
-        }
+            
+            // __ Error checks
+
+            if(this.email == "" || this.newPassword =="" || this.retypedPassword == "" || this.accessCode == ""){
+                this.$q.notify({
+                    color: 'red-4',
+                    textColor: 'black',
+                    icon: 'warning',
+                    message: "Fyll ut alle feltene",
+                    position: 'bottom-right',
+                    timeout: 8000
+                })
+                return
+            }
+            if(this.accessCode != this.acceptedAccessCode){
+                this.$q.notify({
+                    color: 'red-4',
+                    textColor: 'black',
+                    icon: 'warning',
+                    message: "Adgangs koden er ikke korrekt, kontakt support om problemet vedvarer",
+                    position: 'bottom-right',
+                    timeout: 8000
+                })
+                return
+            }
+            
+
+
+            console.log("sign in attempt")
+            firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+            .then( user =>{
+                
+                this.email = ""
+                this.password = ""
+                
+                console.log("user on signin: ", user)
+
+                firebase.firestore().collection('users').doc(user.uid).get()
+                .then( function(resp) {
+                    
+                    if(resp.data().userRole == "admin"){
+                        // console.log(this.$rou)
+                        // this.$router.push("/app/admin-home")
+                        console.log("IS ADMIN")
+                        router.push("/app/admin-home")
+                    }
+
+                })
+            })
+            .catch( err =>{
+                
+                if(err.message.includes('CollectionReference')){return}
+
+                this.$q.notify({
+                    color: 'red-4',
+                    textColor: 'black',
+                    icon: 'warning',
+                    message: err.message,
+                    position: 'bottom-right',
+                    timeout: 8000
+                })
+            })
+        },
+    },
+    created() {
+        firebase.auth().signOut()
     },
 }
 </script>

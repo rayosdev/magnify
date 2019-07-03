@@ -2,12 +2,12 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 // import example from './module-example'
-
-Vue.use(Vuex)
-
 // import { auth } from 'firebase' 
 import state from './modules/state' 
 import auth from './modules/auth/index' 
+
+Vue.use(Vuex)
+
 
 
 
@@ -83,6 +83,9 @@ export default function (/* { ssrContext } */) {
       signOut({ commit }){
         commit('SET_USER', null)
         this.$router.push("/login")
+      },
+      test(){
+        console.log("this worked")
       }
     },
 

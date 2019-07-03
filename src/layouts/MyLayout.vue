@@ -11,9 +11,9 @@
 
         <div class="header__logo-container">
           <anchor-router-link class="header__logo" :to="{hash: '#link-target-top-pitch'}">
-            <router-link to="/">
+            <!-- <router-link to="/">
+            </router-link> -->
               <img src="~assets/header-logo.svg" alt="">
-            </router-link>
           </anchor-router-link>
 
           <div
@@ -27,7 +27,7 @@
           </div>
         </div>
 
-        <nav class="header-nav">
+        <nav class="header-nav" v-if="isWebPapge">
           <ul class="header-nav__list">
             <li 
               :class="getListItemClass(1)"
@@ -112,6 +112,7 @@ export default {
   data () {
     return {
       smallHeader: false,
+      isWebPapge: true,
       activePageLink: 1, 
 
     }
@@ -163,7 +164,17 @@ export default {
       }
     }
 
-  }
+  },
+  created() {
+    
+    if(this.$router.currentRoute.path.includes('/app')){
+      this.smallHeader = true
+      this.isWebPapge = false
+    }
+    else{
+      this.isWebPapge = true
+    }
+  },
 }
 </script>
 
