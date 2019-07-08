@@ -106,28 +106,28 @@ export default {
             
             // __ Error checks
 
-            // if(this.email == "" || this.newPassword =="" || this.retypedPassword == "" || this.accessCode == ""){
-            //     this.$q.notify({
-            //         color: 'red-4',
-            //         textColor: 'black',
-            //         icon: 'warning',
-            //         message: "Fyll ut alle feltene",
-            //         position: 'bottom-right',
-            //         timeout: 8000
-            //     })
-            //     return
-            // }
-            // if(this.accessCode != this.acceptedAccessCode){
-            //     this.$q.notify({
-            //         color: 'red-4',
-            //         textColor: 'black',
-            //         icon: 'warning',
-            //         message: "Adgangs koden er ikke korrekt, kontakt support om problemet vedvarer",
-            //         position: 'bottom-right',
-            //         timeout: 8000
-            //     })
-            //     return
-            // }
+            if(this.email == "" || this.newPassword =="" || this.retypedPassword == "" || this.accessCode == ""){
+                this.$q.notify({
+                    color: 'red-4',
+                    textColor: 'black',
+                    icon: 'warning',
+                    message: "Fyll ut alle feltene",
+                    position: 'right',
+                    timeout: 8000
+                })
+                return
+            }
+            if(this.accessCode != this.acceptedAccessCode){
+                this.$q.notify({
+                    color: 'red-4',
+                    textColor: 'black',
+                    icon: 'warning',
+                    message: "Adgangs koden er ikke korrekt, kontakt support om problemet vedvarer",
+                    position: 'right',
+                    timeout: 8000
+                })
+                return
+            }
 
             console.log("signup attempt Que2")
             firebase.auth().createUserWithEmailAndPassword(this.email, this.newPassword)

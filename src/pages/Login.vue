@@ -17,6 +17,7 @@
                             action="" 
                             method="submit"
                             @submit="loginAttempt"
+                            @reset="onReset"
                         >
                             <q-input
                                 class="login__username"
@@ -47,6 +48,7 @@
                                 hoverColor="#FF948D"
                                 lipColor="#8F2D27"
                                 text="Login"
+                                type="submit"
                             />
                         </form>
                     
@@ -85,7 +87,7 @@ export default {
     },
     methods: {
         loginAttempt: function(e) {
-            e.preventDefault()
+            // e.preventDefault()
             
             // __ Error checks
 
@@ -95,7 +97,7 @@ export default {
                     textColor: 'black',
                     icon: 'warning',
                     message: "Fyll ut alle feltene",
-                    position: 'bottom-right',
+                    position: 'right',
                     timeout: 8000
                 })
                 return
@@ -111,10 +113,10 @@ export default {
                 })
                 return
             }
+
             
 
-
-            console.log("sign in attempt")
+            // console.log("sign in attempt")
             firebase.auth().signInWithEmailAndPassword(this.email, this.password)
             .then( user =>{
                 
@@ -130,6 +132,7 @@ export default {
                         // console.log(this.$rou)
                         // this.$router.push("/app/admin-home")
                         console.log("IS ADMIN")
+
                         router.push("/app/admin-home")
                     }
 
@@ -144,11 +147,15 @@ export default {
                     textColor: 'black',
                     icon: 'warning',
                     message: err.message,
-                    position: 'bottom-right',
+                    position: 'right',
                     timeout: 8000
                 })
             })
         },
+        onReset(){
+            this.email = ""
+            this.password = ""
+        }
     },
     created() {
         firebase.auth().signOut()
