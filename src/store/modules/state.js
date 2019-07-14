@@ -1,4 +1,4 @@
 export default {
-  TESTMAN: "OK GO"
-  //
+  
+  user: null,
 }

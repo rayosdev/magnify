@@ -39,28 +39,49 @@
         
         <div class="users__container">
 
-            <h4 class="users__header">brukere</h4>
-            <q-input
-                class="user__seach"
-                light
-                outlined 
-                v-model="userFilterText"
-                @input="filterUser" 
-                filled 
-                type="text" 
-                hint="Søk etter bruker" 
-            />
-            <q-list dense bordered padding class="rounded-borders">
+            <h4 class="users__header">Brukere</h4>
+            <div class="row justify-center q-gutter-sm">
+                <q-input
+                    class="user__seach q-mb-md col"
+                    light
+                    outlined 
+                    v-model="firstNameInput"
+                    @input="filterUser" 
+                    filled 
+                    type="text" 
+                    hint="Fornavn" 
+                />
+                <q-input
+                    class="user__seach q-mb-md col"
+                    light
+                    outlined 
+                    v-model="lastNameInput"
+                    @input="filterUser" 
+                    filled 
+                    type="text" 
+                    hint="Etternavn" 
+                />
+            </div>
+            <q-list  style="max-height:150px;" dense bordered padding class="rounded-borders list scroll">
                 <q-item 
                     clickable v-ripple
-                    v-for="(t, index) in test" :key="index"
+                    v-for="(user, index) in userList" :key="index"
                 >
                     <q-item-section>
-                        {{t}}
+                        {{user.firstName}},
+                        {{user.lastName}}
                     </q-item-section>
                 </q-item>
 
             </q-list>
+            <div class="row justify-end q-pr-sm q-pt-sm">
+                <q-btn
+                class="[ porject__addbtn ]"
+                round
+                color="secondary"
+                icon="add"
+                />
+            </div>
         </div>
 
     </q-page>
@@ -73,11 +94,23 @@ import firebase from 'firebase'
     export default {
         data() {
             return {
-                test: ["bob","david","daniel"],
+                users: [
+                    {firstName: 'bob', lastName: 'bobson'},
+                    {firstName: 'david', lastName: 'gjertsen'},
+                    {firstName: 'lisa', lastName: 'larsen'},
+                    {firstName: 'eda', lastName: 'barack'},
+                    {firstName: 'senja', lastName: 'slovick'},
+                    {firstName: 'bodil', lastName: 'larsen'},
+                ],
+                userList:[],
+
+                test: ["bob","david","daniel","test","test2"],
                 userFilterText:"",  
                 testProjects: ["telenord","kanaldigital","freshfitnes"],
                 projectFilterText:"",
                 
+                firstNameInput: "",
+                lastNameInput: ""
             }
         },
         computed: {
@@ -87,10 +120,32 @@ import firebase from 'firebase'
         },
         created() {
             this.getUsers
+
+            this.filterUser()
         },
         methods: {
-            filterUser: () => {
+            filterUser: function(){
+                if(this.firstNameInput == "" && this.lastNameInput == ""){
+                    this.userList = this.users   
+                }
+                else{
 
+                    this.userList = []
+                    this.users.forEach(user => {
+                        if(
+                            this.firstNameInput != "" &&
+                            user.firstName.startsWith(this.firstNameInput)
+                        ){
+                            this.userList.push(user)
+                        }
+                        else if(
+                            this.lastNameInput != "" &&
+                            user.lastName.startsWith(this.lastNameInput)
+                        ){
+                            this.userList.push(user)
+                        }
+                    });
+                }
             } 
         },
     }
@@ -145,7 +200,8 @@ import firebase from 'firebase'
     &__container
         grid-row 3/4
         grid-column 1/3
-        max-width 300px
+        max-width 500px
+        min-height 500px
         margin 2em
         padding 1em
         background #ddd

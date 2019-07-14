@@ -114,7 +114,7 @@ export default {
                 return
             }
 
-            
+
 
             // console.log("sign in attempt")
             firebase.auth().signInWithEmailAndPassword(this.email, this.password)
@@ -158,7 +158,9 @@ export default {
         }
     },
     created() {
+        // console.log("user",firebase.auth().currentUser.email)
         firebase.auth().signOut()
+
     },
 }
 </script>
