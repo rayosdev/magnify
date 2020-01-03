@@ -5,9 +5,9 @@ import Vuex from 'vuex'
 // import { auth } from 'firebase' 
 import state from './modules/state' 
 import auth from './modules/auth/index' 
+import firebase from './modules/firebase/firebase' 
 
 Vue.use(Vuex)
-
 
 
 
@@ -20,16 +20,19 @@ export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
     modules: {
       // example
-      state,
-      auth
+      // state,
+      // auth,
+      firebase
 
     },
     state: {
-      ...state
+      // ...state,
+      ...firebase
     },
     getters: {
-      user(state){return state.user},
-      error(state){return state.error}
+      firebase(state){return state.firebase},
+      // user(state){return state.user},
+      // error(state){return state.error}
     }
     ,
     mutations: {
@@ -95,6 +98,7 @@ export default function (/* { ssrContext } */) {
     strict: process.env.DEV
   })
 
+  
 
   return Store
 }

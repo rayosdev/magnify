@@ -1,15 +1,31 @@
 <template>
-        <q-page class="main-container">
+    <q-page class="main-container">
+     <q-drawer
+        side="left"
+        v-model="drawerLeft"
+        bordered
+        :width="200"
+        :breakpoint="500"
+        content-class="bg-grey-3"
+      >
+        <!-- <q-scroll-area class="fit">
+          <div class="q-pa-sm">
+            <div v-for="n in 50" :key="n">Drawer {{ n }} / 50</div>
+          </div>
+        </q-scroll-area> -->
+      </q-drawer>
+
             
         <div class="hader__container">
             <h3 class="header__text">Site Admin</h3>
+            <q-btn flat @click="drawerLeft = !drawerLeft" round dense icon="menu" />
         </div>
 
         <div class="projects__container">
 
             <h4 class="projects__header">Prosjkter</h4>
             <q-input
-                class="projects__seach"
+                class="projects__search"
                 light
                 outlined 
                 v-model="projectFilterText"
@@ -62,7 +78,7 @@
                     hint="Etternavn" 
                 />
             </div>
-            <q-list  style="max-height:150px;" dense bordered padding class="rounded-borders list scroll">
+            <q-list  style="" dense bordered padding class="rounded-borders list scroll">
                 <q-item 
                     clickable v-ripple
                     v-for="(user, index) in userList" :key="index"
@@ -80,10 +96,52 @@
                 round
                 color="secondary"
                 icon="add"
+                @click="fixed = true"
                 />
             </div>
         </div>
 
+        <q-dialog v-model="fixed">
+            <q-card>
+                <q-card-section>
+                    <div class="text-h6">Lag bruker</div>
+                </q-card-section>
+
+                <q-separator />
+
+                <q-card-section style="max-height: 50vh" class="scroll">
+                    <div class="row justify-center q-gutter-sm">
+                        <q-input
+                            class="user__seach q-mb-md col"
+                            light
+                            outlined 
+                            v-model="firstNameInput"
+                            @input="filterUser" 
+                            filled 
+                            type="text" 
+                            hint="Fornavn" 
+                        />
+                        <q-input
+                            class="user__seach q-mb-md col"
+                            light
+                            outlined 
+                            v-model="lastNameInput"
+                            @input="filterUser" 
+                            filled 
+                            type="text" 
+                            hint="Etternavn" 
+                        />
+                    </div>
+                </q-card-section>
+
+                <q-separator />
+
+                <q-card-actions align="right">
+                    <q-btn flat label="Avbryt" color="primary" v-close-popup />
+                    <q-btn flat label="Legg til Bruker" color="primary" v-close-popup />
+                </q-card-actions>
+            </q-card>
+        </q-dialog>
     </q-page>
 </template>
 
@@ -94,6 +152,8 @@ import firebase from 'firebase'
     export default {
         data() {
             return {
+                drawerLeft: false,
+                fixed: false,
                 users: [
                     {firstName: 'bob', lastName: 'bobson'},
                     {firstName: 'david', lastName: 'gjertsen'},
@@ -110,20 +170,35 @@ import firebase from 'firebase'
                 projectFilterText:"",
                 
                 firstNameInput: "",
-                lastNameInput: ""
+                lastNameInput: "",
+
+                dialogHeader: "Lag ny bruker",
+
             }
         },
         computed: {
-          getUsers: () => {
-              
-          }  
+          
         },
         created() {
-            this.getUsers
+            // console.log(firebase.firestore())
+            // this.db = firebase.firestore()
+
+            this.getUsers()
 
             this.filterUser()
         },
         methods: {
+            getUsers: () => {
+              var docRef = firebase.firestore().collection("users")
+              docRef.get()
+              .then(ref => {
+                  console.log("test", ref.data)
+                  
+              })
+            },  
+            filterProjects: function () {
+              alert("test")  
+            },
             filterUser: function(){
                 if(this.firstNameInput == "" && this.lastNameInput == ""){
                     this.userList = this.users   

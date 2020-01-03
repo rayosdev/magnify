@@ -39,17 +39,25 @@ module.exports = function (ctx) {
         'QItemSection',
         'QItemLabel',
         'QToggle',
-        'QInput'
+        'QInput',
+
+        'QDialog',
+        'QCardSection',
+        'QCard',
+        'QSeparator',
+        'QCardActions'
         
       ],
 
       directives: [
-        'Ripple'
+        'Ripple',
+        'ClosePopup'
       ],
 
       // Quasar plugins
       plugins: [
-        'Notify'
+        'Notify',
+        'Loading'
       ]
 
       // iconSet: 'ionicons-v4'

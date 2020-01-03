@@ -3,6 +3,7 @@
         <div class="container">
             <div id="link-target-recognition" style="position:relative; top: -150px"></div>
             <div class="content-container">
+
                 <div class="content-container__center">
 
                         <div class="login-info__container">
@@ -16,7 +17,7 @@
                             class="login__container" 
                             action="" 
                             method="submit"
-                            @submit="loginAttempt"
+                            @submit.prevent="executeLogin"
                             @reset="onReset"
                         >
                             <q-input
@@ -68,8 +69,10 @@
 import Footer from "../components/Footer"
 import BaseButton from "../components/BaseButton"
 
-import store from "../store"
+// import store from "../store"
 import firebase from 'firebase'
+import { mapGetters } from 'vuex'
+import { setTimeout } from 'timers';
 
 
 export default {
@@ -86,6 +89,13 @@ export default {
         }
     },
     methods: {
+        executeLogin(e) {
+            // console.log(this.$store.getters['firebase'])
+            this.$q.loading.show()
+            this.loginAttempt()
+            // this.$store.
+            
+        },
         loginAttempt: function(e) {
             // e.preventDefault()
             
@@ -132,7 +142,7 @@ export default {
                         // console.log(this.$rou)
                         // this.$router.push("/app/admin-home")
                         console.log("IS ADMIN")
-
+                        
                         router.push("/app/admin-home")
                     }
 
@@ -157,11 +167,18 @@ export default {
             this.password = ""
         }
     },
+    computed: {
+        ...mapGetters('firebase', ['user']),
+    },
     created() {
+
         // console.log("user",firebase.auth().currentUser.email)
         firebase.auth().signOut()
 
     },
+    beforeDestroy(){
+        this.$q.loading.hide()
+    }
 }
 </script>
 
