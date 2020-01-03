@@ -1,5 +1,6 @@
 <template>
   <q-page>
+    <h1>HOLA</h1>
     <TopPitch />
     <Recognition />
     <Gamefy />
