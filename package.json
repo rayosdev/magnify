@@ -17,7 +17,7 @@
     "vue-anchor-router-link": "^0.8.4"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.0-beta.0"
+    "@quasar/app": "^2.4.3"
   },
   "engines": {
     "node": ">= 8.9.0",
